@@ -12,7 +12,7 @@ const paintSchema = new mongoose.Schema({
   }
 }, {
   timestamps: true
-})
+});
 
 const userSchema = new mongoose.Schema({
   name: String,

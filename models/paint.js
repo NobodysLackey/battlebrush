@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// const mongoose = require('mongoose');
+// const Schema = mongoose.Schema;
 
-const paintSchema = new Schema({
+// const paintSchema = new Schema({
   
-}, {
-  timestamps: true
-});
+// }, {
+//   timestamps: true
+// });
 
-module.exports = mongoose.model('Paint', paintSchema);
+// module.exports = mongoose.model('Paint', paintSchema);

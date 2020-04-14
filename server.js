@@ -30,5 +30,5 @@ app.get('/*', function(req, res) {
 const port = process.env.PORT || 3001;
 
 app.listen(port, function() {
-  console.log(`Express backend services running on port ${port}`)
+  console.log(` . . . Express backend services running on port ${port} . . . `)
 })

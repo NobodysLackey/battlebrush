@@ -9,5 +9,5 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection;
 
 db.once('connected', () => {
-  console.log(`Connected to MongoDB ${db.name} on ${db.host}:${db.port}`);
+  console.log(` . . . Connected to MongoDB ${db.name} on ${db.host}:${db.port} . . . `);
 });
