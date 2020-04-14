@@ -5,10 +5,14 @@ const SALT_ROUNDS = 6;
 
 const paintSchema = new mongoose.Schema({
   colorName: String,
-  isOwned: Boolean,
+  isOwned: {
+    type: Boolean,
+    default: false
+  },
   paintType: {
     type: String,
-    enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze']
+    enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze'],
+    default: 'Layer'
   }
 }, {
   timestamps: true

@@ -5,12 +5,13 @@
   height: 7vmin;
   width: 200vmin;
   background-color: rgb(238,99,94);
-  margin: 0 0 3vmin 0;
+  margin: 0 0 1vmin 0;
 }
 
 .NavBar-link {
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
 
 .NavBar-link:hover {

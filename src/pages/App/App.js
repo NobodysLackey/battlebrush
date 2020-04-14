@@ -5,14 +5,14 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import PaintListPage from '../PaintListPage/PaintListPage';
-import * as paintListAPI from '../../services/paint-api';
+import AddPaintPage from '../AddPaintPage/AddPaintPage';
+import * as paintAPI from '../../services/paint-api';
 import * as userAPI from '../../services/user-api';
 import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
   state = {
-    user: userAPI.getUser(),
-    paintLists: null
+    user: userAPI.getUser()
   };
 
   handleLogout = () => {
@@ -25,9 +25,18 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const paintLists = await paintListAPI.index();
-    this.setState({ paintLists });
+    const paint = await paintAPI.index();
+    const user = this.state.user
+    user.paints = paint
+    this.setState({ user });
   };
+
+  handleAddPaint = async (paint) => {
+    const newPaint = await paintAPI.create(paint)
+    this.setState({
+      paints: [...this.state.user.paints, newPaint]
+    })
+  }
 
   render() {
     return (
@@ -53,6 +62,14 @@ class App extends Component {
             <PaintListPage
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
+              paints={this.state.user.paints}
+            />
+          }/>
+          <Route exact path='/addpaint' render={({ history }) => 
+            <AddPaintPage
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              handleAddPaint={this.handleAddPaint}
             />
           }/>
           <Route exact path='/profile' render={() => 

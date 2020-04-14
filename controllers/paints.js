@@ -1,4 +1,5 @@
 var Paint = require('../models/paint');
+const User = require('../models/user');
 
 module.exports = {
   index,
@@ -7,8 +8,9 @@ module.exports = {
 
 async function index(req, res) {
   try{
-      const paints = await Paint.find({});
-      res.status(200).json(paints);
+      await User.findById(req.user.id, (err, user) => 
+        res.status(200).json(user.paints)
+      )
   }
   catch(err){
       res.status(500).json(err);
@@ -16,12 +18,14 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-  console.log('user: ', req.user)
-  try {
-    const paint = await Paint.create(req.body);
-    res.status(201).json(paint);
-  }
-  catch(err){
-    res.status(500).json(err);
-  }
+  console.log(req.user._id)
+  const paint = await User.findById(req.user._id, function(err, user) {
+      if (err) return (err);
+      user.paints.push(req.body);
+      user.markModified('paints')
+      user.save( (err) => {
+          if (err) return (err);
+          res.status(201).json(user.paints[user.paints.length - 1]);
+      });
+  });
 }
