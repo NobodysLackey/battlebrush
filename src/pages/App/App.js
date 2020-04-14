@@ -3,43 +3,35 @@ import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import TktksSecretPage from '../TktksSecretPage/TktksSecretPage'
-import * as tktkAPI from '../../services/tktk-api';
+import ProfilePage from '../ProfilePage/ProfilePage';
+import PaintListPage from '../PaintListPage/PaintListPage';
+import * as paintListAPI from '../../services/paint-api';
 import * as userAPI from '../../services/user-api';
-import Tktk from '../../components/Tktk/Tktk'
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
   state = {
-    // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
-    tktks: null
+    paintLists: null
   };
-
-  /*--------------------------- Callback Methods ---------------------------*/
 
   handleLogout = () => {
     userAPI.logout();
     this.setState({ user: null });
-  }
+  };
 
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
-  }
-
-  /*-------------------------- Lifecycle Methods ---------------------------*/
+  };
 
   async componentDidMount() {
-    const tktks = await tktkAPI.index();
-    this.setState({ tktks });
-  }
-
-  /*-------------------------------- Render --------------------------------*/
+    const paintLists = await paintListAPI.index();
+    this.setState({ paintLists });
+  };
 
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Tktk</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
@@ -57,19 +49,27 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/tktk-secret' render={() => 
+          <Route exact path='/paintlist' render={({ history }) => 
+            <PaintListPage
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
+          }/>
+          <Route exact path='/profile' render={() => 
             userAPI.getUser() ? 
-              <TktksSecretPage />
+              <ProfilePage />
             :
               <Redirect to='/login'/>
           }/>
           <Route exact path='/' render={() =>
-            <Tktk />
+            <div className="welcome">
+              <h1>Welcome to Battle Brush!</h1>
+            </div>
           }/>
         </Switch>
       </div>
     );
   }
-}
+};
 
 export default App;

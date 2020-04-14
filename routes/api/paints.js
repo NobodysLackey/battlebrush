@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const tktksCtrl = require('../../controllers/tktks');
+const paintsCtrl = require('../../controllers/paints');
 
 /*------------------------------ Public Routes ------------------------------*/
 
-router.get('/', checkAuth, tktksCtrl.index);
+router.get('/', checkAuth, paintsCtrl.index);
 
 /*----------------------------- Protected Routes ----------------------------*/
 
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.post('/', checkAuth, tktksCtrl.create);
+router.post('/', checkAuth, paintsCtrl.create);
 
 /*----------------------------- Helper Functions ----------------------------*/
 
