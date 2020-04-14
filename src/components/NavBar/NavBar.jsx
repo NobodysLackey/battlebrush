@@ -9,6 +9,8 @@ const NavBar = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='/paintlist' className='NavBar-link'>Paint List</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
+      <Link to='/addpaint' className='NavBar-link'>Add</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='/profile' className='NavBar-link'>Profile</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>

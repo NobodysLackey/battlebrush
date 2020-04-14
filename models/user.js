@@ -3,10 +3,22 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
+const paintSchema = new mongoose.Schema({
+  colorName: String,
+  isOwned: Boolean,
+  paintType: {
+    type: String,
+    enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze']
+  }
+}, {
+  timestamps: true
+})
+
 const userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, required: true, lowercase: true, unique: true},
-  password: String
+  password: String,
+  paints: [paintSchema]
 }, {
   timestamps: true
 });

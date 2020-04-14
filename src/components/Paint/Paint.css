@@ -6,7 +6,7 @@
     height: 15vmin;
     width: 50vmin;
 
-    background-color: green;
+    background-color: rgb(201, 72, 68);
 
     color: white;
     font-weight: bold;
@@ -16,4 +16,9 @@
     border: solid;
     border-color: black;
     border-width: .3vmin;
+}
+
+.Paint-card:hover {
+    background-color: rgb(238,99,94);
+    cursor: pointer;
 }
