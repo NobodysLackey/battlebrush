@@ -31,11 +31,11 @@ class App extends Component {
     this.setState({ user });
   };
 
-  handleAddPaint = async (paint) => {
-    const newPaint = await paintAPI.create(paint)
-    this.setState({
+  handleAddPaint = async (newPaintData) => {
+    const newPaint = await paintAPI.create(newPaintData);
+    this.setState(state => ({
       paints: [...this.state.user.paints, newPaint]
-    })
+    }), () => this.props.history.push('/paintlist'));
   }
 
   render() {

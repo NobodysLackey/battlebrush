@@ -8,7 +8,7 @@ module.exports = {
 
 async function index(req, res) {
   try{
-      await User.findById(req.user.id, (err, user) => 
+      await User.findById(req.user._id, (err, user) => 
         res.status(200).json(user.paints)
       )
   }
