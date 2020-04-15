@@ -6,9 +6,9 @@ module.exports = {
   delete: deleteOne
 };
 
-async function index(req, res) {
+function index(req, res) {
   try{
-      await User.findById(req.user._id, (err, user) => 
+      User.findById(req.user._id, (err, user) => 
         res.status(200).json(user.paints)
       )
   }
@@ -17,9 +17,9 @@ async function index(req, res) {
   }
 };
 
-async function create(req, res) {
-  console.log(req.user._id)
-  await User.findById(req.user._id, (err, user) => {
+function create(req, res) {
+  console.log('CREATE')
+  User.findById(req.user._id, (err, user) => {
       if (err) return (err);
       user.paints.push(req.body);
       user.markModified('paints')
@@ -30,10 +30,13 @@ async function create(req, res) {
   });
 };
 
-async function deleteOne(req, res) {
-  const deletedPaint = await User.findById(req.user.id, (err, user) => {
+function deleteOne(req, res) {
+  User.findById(req.user._id, (err, user) => {
     if (err) return (err);
-    user.paints.findByIdAndRemove(req.params._id);
-    res.status(200).json(deletedPaint);
+    user.paints.remove(req.params._id);
+    user.save( (err) => {
+      if (err) return (err);
+      res.status(200).json({message: 'You have successfully deleted this resource...'});
+    });
   });
 };

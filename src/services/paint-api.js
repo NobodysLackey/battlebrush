@@ -1,6 +1,6 @@
 import tokenService from './tokenService';
 
-const BASE_URL = '/api/paints/';
+const BASE_URL = '/api/paints';
 
 export function index() {
   const options = {
@@ -13,6 +13,7 @@ export function index() {
 }
 
 export function create(score) {
+  console.log('Get REQUEST???')
   const options = {
     method: 'POST',
     headers: {
@@ -26,7 +27,12 @@ export function create(score) {
 }
 
 export function deleteOne(id) {
-  return fetch(`${BASE_URL}/${id}`, {
-    method: 'DELETE'
-  }).then(res => res.json());
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
+  };
+  return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
 }

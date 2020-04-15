@@ -7,14 +7,11 @@ const PaintList = (props) => {
     return (
         <div className="PaintList">
           {props.paints.map((paint) =>
-            <div>
-              <Paint
-                key = {paint._id}
+            <Paint
+                key= {paint._id}
                 paint = {paint}
                 handleDeletePaint = {props.handleDeletePaint}
               />
-              <br></br>
-            </div>
             )}
         </div>
     )

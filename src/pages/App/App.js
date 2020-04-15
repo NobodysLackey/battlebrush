@@ -34,6 +34,7 @@ class App extends Component {
 
   handleAddPaint = async (newPaintData) => {
     const newPaint = await paintAPI.create(newPaintData);
+    console.log(newPaint)
     this.setState(state => ({
       paints: [...this.state.paints, newPaint]
     }), () => this.props.history.push('/paintlist'));

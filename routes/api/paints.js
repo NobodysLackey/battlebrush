@@ -11,6 +11,7 @@ router.get('/', checkAuth, paintsCtrl.index);
 
 // Process the token for only the routes below
 router.post('/', checkAuth, paintsCtrl.create);
+router.delete('/:id', checkAuth,  paintsCtrl.delete);
 
 /*----------------------------- Helper Functions ----------------------------*/
 

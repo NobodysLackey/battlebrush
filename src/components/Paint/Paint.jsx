@@ -3,19 +3,20 @@ import './Paint.css';
 
 const Paint = (props) => {
   return (
+    <React.Fragment>
       <div className="Paint-card">
         <p>{props.paint.colorName}</p>
         <p>{props.paint.paintType}</p>
-        <p>
-          {props.paint.isOwned ? 'Owned' : 'Not Owned'}
-        </p>
+        <p>{props.paint.isOwned ? 'Owned' : 'Not Owned'}</p>
         <button
           className="button"
           onClick={() => props.handleDeletePaint(props.paint._id)}
         >
-          Remove
+          X
         </button>
       </div>
+      <br></br>
+    </React.Fragment>
   );
 }
  

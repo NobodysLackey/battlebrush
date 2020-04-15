@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   height: 7vmin;
-  width: 200vmin;
+  width: 100%;
   background-color: rgb(238,99,94);
   margin: 0 0 1vmin 0;
+  font-size: 4vmin;
 }
 
 .NavBar-link {
