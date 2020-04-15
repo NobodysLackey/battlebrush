@@ -12,7 +12,8 @@ import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
   state = {
-    user: userAPI.getUser()
+    user: userAPI.getUser(),
+    paints: []
   };
 
   handleLogout = () => {
@@ -25,51 +26,60 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const paint = await paintAPI.index();
-    const user = this.state.user
-    user.paints = paint
-    this.setState({ user });
+    const paints = await paintAPI.index();
+    this.setState({
+      paints
+    })
   };
 
   handleAddPaint = async (newPaintData) => {
     const newPaint = await paintAPI.create(newPaintData);
     this.setState(state => ({
-      paints: [...this.state.user.paints, newPaint]
+      paints: [...this.state.paints, newPaint]
     }), () => this.props.history.push('/paintlist'));
+  }
+
+  handleDeletePaint = async (id) => {
+    await paintAPI.deleteOne(id)
+    this.setState({
+      paints: this.state.paints.filter((paint) => paint._id !== id)
+    })
   }
 
   render() {
     return (
       <div className="App">
         <NavBar
-          user={this.state.user}
-          handleLogout={this.handleLogout}
+          user = {this.state.user}
+          handleLogout = {this.handleLogout}
         />
         <Switch>
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+              history = {history}
+              handleSignupOrLogin = {this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+              history = {history}
+              handleSignupOrLogin = {this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/paintlist' render={({ history }) => 
             <PaintListPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
-              paints={this.state.user.paints}
+              paints = {this.state.paints}
+              handleDeletePaint = {this.handleDeletePaint}
+              history = {history}
+              handleSignupOrLogin = {this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/addpaint' render={({ history }) => 
             <AddPaintPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
-              handleAddPaint={this.handleAddPaint}
+              paints = {this.state.paints}
+              history = {history}
+              handleSignupOrLogin = {this.handleSignupOrLogin}
+              handleAddPaint = {this.handleAddPaint}
             />
           }/>
           <Route exact path='/profile' render={() => 

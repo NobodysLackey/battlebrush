@@ -24,3 +24,9 @@ export function create(score) {
   };
   return fetch(BASE_URL, options).then(res => res.json());
 }
+
+export function deleteOne(id) {
+  return fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE'
+  }).then(res => res.json());
+}

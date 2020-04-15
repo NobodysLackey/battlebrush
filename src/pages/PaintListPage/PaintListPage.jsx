@@ -1,11 +1,13 @@
 import React from 'react';
 import PaintList from '../../components/PaintList/PaintList';
 
-const PaintListPage = () => {
+const PaintListPage = (props) => {
+  console.log(props)
   return (
-    <React.Fragment>
-        <PaintList />
-    </React.Fragment>
+        <PaintList 
+          paints = {props.paints}
+          handleDeletePaint = {props.handleDeletePaint}
+        />
   );
 };
  

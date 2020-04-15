@@ -1,14 +1,28 @@
 import React from 'react';
 import Paint from '../Paint/Paint';
+import './PaintList.css';
 
-const PaintList = () => {
-  return (
-    <React.Fragment>
-      <h3>This is the PaintList Component.</h3>
-      <p>It is located at src/components/PaintList/PaintList.jsx</p>
-      <Paint />
-    </React.Fragment>
-  );
-}
+const PaintList = (props) => {
+  if(props.paints.length){
+    return (
+        <div className="PaintList">
+          {props.paints.map((paint) =>
+            <div>
+              <Paint
+                key = {paint._id}
+                paint = {paint}
+                handleDeletePaint = {props.handleDeletePaint}
+              />
+              <br></br>
+            </div>
+            )}
+        </div>
+    )
+  } else {
+    return (
+      <h3>You don't have any paints stored!</h3>
+    )
+  }
+};
  
 export default PaintList;
