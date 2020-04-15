@@ -37,6 +37,7 @@ class AddPaint extends Component {
                     name="colorName"
                     value={this.state.formData.colorName}
                     onChange={this.handleChange}
+                    autoComplete="off"
                 />
                 <br></br><br></br>
                 <span>Paint Type</span>
@@ -49,11 +50,11 @@ class AddPaint extends Component {
                     onChange={this.handleChange}
                 >
                     <option>Base</option>
-                    <option>Layer</option>
                     <option>Shade</option>
-                    <option>Technical</option>
+                    <option>Layer</option>
                     <option>Edge</option>
                     <option>Glaze</option>
+                    <option>Technical</option>
                 </select>
                 <br></br><br></br>
                 <span>Have it?</span>

@@ -44,6 +44,10 @@ class App extends Component {
     this.setState({
       paints: this.state.paints.filter((paint) => paint._id !== deletedPaint._id)
     }, () => this.props.history.push('/paintlist'));
+    const paints = await paintAPI.index();
+    this.setState({
+      paints
+    });
   }
 
   render() {
