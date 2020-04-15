@@ -41,13 +41,20 @@ class AddPaint extends Component {
                 <br></br><br></br>
                 <span>Paint Type</span>
                 <br></br>
-                <input
+                <select
                     className="input-field"
                     type="text"
                     name="paintType"
                     value={this.state.formData.paintType}
                     onChange={this.handleChange}
-                />
+                >
+                    <option>Base</option>
+                    <option>Layer</option>
+                    <option>Shade</option>
+                    <option>Technical</option>
+                    <option>Edge</option>
+                    <option>Glaze</option>
+                </select>
                 <br></br><br></br>
                 <span>Have it?</span>
                 <br></br>
