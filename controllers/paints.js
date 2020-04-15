@@ -18,7 +18,6 @@ function index(req, res) {
 };
 
 function create(req, res) {
-  console.log('CREATE')
   User.findById(req.user._id, (err, user) => {
       if (err) return (err);
       user.paints.push(req.body);
@@ -33,10 +32,10 @@ function create(req, res) {
 function deleteOne(req, res) {
   User.findById(req.user._id, (err, user) => {
     if (err) return (err);
-    user.paints.remove(req.params._id);
-    user.save( (err) => {
+    let deletedPaint = user.paints.splice(req.params.id, 1);
+    user.save( (err, paint) => {
       if (err) return (err);
-      res.status(200).json({message: 'You have successfully deleted this resource...'});
+      res.status(200).json(deletedPaint);
     });
   });
 };

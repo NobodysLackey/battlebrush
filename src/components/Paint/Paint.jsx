@@ -10,7 +10,7 @@ const Paint = (props) => {
         <p>{props.paint.isOwned ? 'Owned' : 'Not Owned'}</p>
         <button
           className="button"
-          onClick={() => props.handleDeletePaint(props.paint._id)}
+          onClick={() => props.handleDeletePaint(props.idx)}
         >
           X
         </button>

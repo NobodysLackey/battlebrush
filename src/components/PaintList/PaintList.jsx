@@ -6,8 +6,9 @@ const PaintList = (props) => {
   if(props.paints.length){
     return (
         <div className="PaintList">
-          {props.paints.map((paint) =>
+          {props.paints.map((paint, idx) =>
             <Paint
+                idx = {idx}
                 key= {paint._id}
                 paint = {paint}
                 handleDeletePaint = {props.handleDeletePaint}

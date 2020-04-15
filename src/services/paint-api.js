@@ -13,7 +13,6 @@ export function index() {
 }
 
 export function create(score) {
-  console.log('Get REQUEST???')
   const options = {
     method: 'POST',
     headers: {

@@ -34,17 +34,16 @@ class App extends Component {
 
   handleAddPaint = async (newPaintData) => {
     const newPaint = await paintAPI.create(newPaintData);
-    console.log(newPaint)
     this.setState(state => ({
       paints: [...this.state.paints, newPaint]
     }), () => this.props.history.push('/paintlist'));
   }
 
   handleDeletePaint = async (id) => {
-    await paintAPI.deleteOne(id)
+    const deletedPaint = await paintAPI.deleteOne(id);
     this.setState({
-      paints: this.state.paints.filter((paint) => paint._id !== id)
-    })
+      paints: this.state.paints.filter((paint) => paint._id !== deletedPaint._id)
+    }, () => this.props.history.push('/paintlist'));
   }
 
   render() {
