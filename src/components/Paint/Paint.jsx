@@ -1,10 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Paint.css';
+
 
 const Paint = (props) => {
   return (
     <React.Fragment>
-      <div className="Paint-card">
+      <Link 
+        className="Paint-card"
+        to={{
+          pathname: `/update`,
+          state: props.paint,
+          idx: props.idx
+        }}
+      >
         <div className="Paint-card-drop-div">
           <div className="Paint-card-drop"><img src="./drop-grey.png" alt="paintdrop"/></div>
         </div>
@@ -19,7 +28,7 @@ const Paint = (props) => {
             x
           </button>
         </div>
-      </div>
+      </Link>
       <br></br>
     </React.Fragment>
   );
