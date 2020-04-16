@@ -49,6 +49,7 @@ class AddPaint extends Component {
                     value={this.state.formData.paintType}
                     onChange={this.handleChange}
                 >
+                    <option>-</option>
                     <option>Base</option>
                     <option>Shade</option>
                     <option>Layer</option>

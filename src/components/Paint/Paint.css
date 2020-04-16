@@ -1,8 +1,7 @@
 .Paint-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr 2fr;
 
     height: 15vmin;
     width: 30vmin;
@@ -10,7 +9,6 @@
     background-color: rgb(201, 72, 68);
 
     color: white;
-    font-weight: bold;
     text-align: center;
     text-decoration: none;
 
@@ -21,10 +19,65 @@
 
 .Paint-card:hover {
     background-color: rgb(238,99,94);
-    cursor: pointer;
 }
 
-p {
+.Paint-card-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    font-weight: bold;
+    font-size: 2.5vmin;
+    line-height: 5vmin;
+}
+
+.Paint-card-type {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    font-style: italic;
+    font-size: 2vmin;
+    line-height: 5vmin;
+}
+
+.Paint-card-owned {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
     font-size: 1.5vmin;
-    line-height: 1.5vmin;
+    line-height: 5vmin;
+}
+
+.Paint-card-btn {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    line-height: 5vmin;
+}
+
+.btn {
+    background-color: white;
+
+    font-weight: bold;
+    color: rgb(201, 72, 68);
+
+    border: solid;
+    border-color: black;
+    border-width: .2vmin;
+}
+
+.btn:hover {
+    background-color: rgb(201, 72, 68);
+
+    font-weight: bold;
+    color: white;
+
+    cursor: pointer;
 }

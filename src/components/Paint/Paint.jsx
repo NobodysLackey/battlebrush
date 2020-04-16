@@ -5,15 +5,17 @@ const Paint = (props) => {
   return (
     <React.Fragment>
       <div className="Paint-card">
-        <p>{props.paint.colorName}</p>
-        <p>{props.paint.paintType}</p>
-        <p>{props.paint.isOwned ? 'Owned' : 'Not Owned'}</p>
-        <button
-          className="button"
-          onClick={() => props.handleDeletePaint(props.idx)}
-        >
-          X
-        </button>
+        <div className="Paint-card-title">{props.paint.colorName}</div>
+        <div className="Paint-card-type">{props.paint.paintType}</div>
+        <div className="Paint-card-owned">{props.paint.isOwned ? 'Owned' : 'Not Owned'}</div>
+        <div className="Paint-card-btn">
+          <button
+            className="btn"
+            onClick={() => props.handleDeletePaint(props.idx)}
+          >
+            X
+          </button>
+        </div>
       </div>
       <br></br>
     </React.Fragment>
