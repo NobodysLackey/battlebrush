@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import PaintListPage from '../PaintListPage/PaintListPage';
 import AddPaintPage from '../AddPaintPage/AddPaintPage';
+import UpdatePaintPage from '../UpdatePaintPage/UpdatePaintPage';
 import * as paintAPI from '../../services/paint-api';
 import * as userAPI from '../../services/user-api';
 import NavBar from '../../components/NavBar/NavBar';
@@ -50,6 +51,17 @@ class App extends Component {
     });
   }
 
+  handleUpdatePaint = async (updatedPaintData, idx, id) => {
+    const updatedPaint = await paintAPI.update(updatedPaintData, idx);
+    const newPaintsArray = this.state.paints.map(c =>
+        c._id === id ? updatedPaint : c
+      );
+      this.setState(
+        {paints: newPaintsArray},
+        () => this.props.history.push('/paintlist')
+      );
+  }
+
   render() {
     return (
       <div className="App">
@@ -86,6 +98,12 @@ class App extends Component {
               handleAddPaint = {this.handleAddPaint}
             />
           }/>
+          <Route exact path='/update' render={({history, location}) => 
+            <UpdatePaintPage
+              handleUpdatePaint={this.handleUpdatePaint}
+              location={location}
+            />
+          } />
           <Route exact path='/profile' render={() => 
             userAPI.getUser() ? 
               <ProfilePage />

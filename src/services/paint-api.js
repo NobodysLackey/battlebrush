@@ -35,3 +35,11 @@ export function deleteOne(id) {
   };
   return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
 }
+
+export function update(paint, idx) {
+  return fetch(`${BASE_URL}/${idx}`, {
+    method: 'PUT',
+    headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()},
+    body: JSON.stringify(paint)
+  }, {mode: "cors"}).then(res => res.json());
+}

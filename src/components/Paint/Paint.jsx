@@ -3,32 +3,33 @@ import { Link } from 'react-router-dom';
 import './Paint.css';
 
 
-const Paint = (props) => {
+const Paint = ({paint, handleDeletePaint, idx}) => {
   return (
     <React.Fragment>
-      <Link 
-        className="Paint-card"
-        to={{
-          pathname: `/update`,
-          state: props.paint,
-          idx: props.idx
-        }}
-      >
-        <div className="Paint-card-drop-div">
+      <div className="Paint-card">
+      <div className="Paint-card-drop-div">
           <div className="Paint-card-drop"><img src="./drop-grey.png" alt="paintdrop"/></div>
         </div>
-        <div className="Paint-card-title">{props.paint.colorName}</div>
-        <div className="Paint-card-type">{props.paint.paintType}</div>
-        <div className="Paint-card-owned">{props.paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>
-        <div className="Paint-card-btn">
-          <button
-            className="btn"
-            onClick={() => props.handleDeletePaint(props.idx)}
-          >
-            x
-          </button>
-        </div>
-      </Link>
+        <div className="Paint-card-title">{paint.colorName}</div>
+        <div className="Paint-card-type">{paint.paintType}</div>
+        <div className="Paint-card-owned">{paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>
+        <Link
+          className='update-btn'
+          to={{
+                  pathname: '/update',
+                  state: {paint},
+                  idx: idx
+          }}
+        >
+        UPDATE
+        </Link>
+        <Link
+          className="delete-btn"
+          onClick={() => handleDeletePaint(idx)}
+        >
+        REMOVE
+        </Link>
+      </div>
       <br></br>
     </React.Fragment>
   );

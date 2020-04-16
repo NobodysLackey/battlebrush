@@ -6,7 +6,7 @@
     height: 15vmin;
     width: 30vmin;
 
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(206, 206, 206);
 
     text-align: center;
     text-decoration: none;
@@ -77,43 +77,52 @@ img {
     grid-row-start: 3;
     grid-row-end: 4;
 
-    justify-self: start;
-
     color: black;
     font-size: 1.75vmin;
     line-height: 5vmin;
+    text-align: left;
 
     padding-left: 1.75vmin;
 }
 
-.Paint-card-btn {
+.delete-btn {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
 
-    justify-self: end;
-    
-    padding-top: 1vmin;
-    padding-right: 1vmin;
-}
+    vertical-align: middle;
 
-.btn {
-    background-color: white;
-
-    border-width: 0vmin;
-    border-radius: 25%;
-
+    font-size: 1.5vmin;
+    line-height: 5vmin;
     font-weight: bold;
     color: rgb(201, 72, 68);
-
-    height: 3vmin;
-    width: 3vmin;
+    text-decoration: none;
+    text-align: center;
 }
 
-.btn:hover {
-    background-color: rgb(201, 72, 68);
+.delete-btn:hover {
+    font-weight: bold;
+    color: white;
 
+    cursor: pointer;
+}
+
+.update-btn {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    font-size: 1.5vmin;
+    line-height: 5vmin;
+    font-weight: bold;
+    color: rgb(201, 72, 68);
+    text-decoration: none;
+    text-align: center;
+}
+
+.update-btn:hover {
     font-weight: bold;
     color: white;
 

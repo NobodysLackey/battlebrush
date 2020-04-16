@@ -16,6 +16,9 @@ class UpdatePaintPage extends Component {
   };
 
   handleChange = e => {
+    if(e.target.name === 'isOwned'){
+      e.target.value = !this.state.formData.isOwned
+    } 
     const formData = {...this.state.formData, [e.target.name]: e.target.value};
     this.setState({
       formData,
@@ -26,7 +29,7 @@ class UpdatePaintPage extends Component {
   render() {
     return (
       <>
-        <h1>Update Your Paint</h1>
+        <h3>Update Your Paint</h3>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Paint Color</label>
@@ -53,6 +56,7 @@ class UpdatePaintPage extends Component {
                 type="checkbox"
                 className="form-control"
                 name="isOwned"
+                checked={this.state.formData.isOwned}
                 value={this.state.formData.isOwned}
                 onChange={this.handleChange}
             />
