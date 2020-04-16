@@ -5,6 +5,9 @@ const Paint = (props) => {
   return (
     <React.Fragment>
       <div className="Paint-card">
+        <div className="Paint-card-drop-div">
+          <div className="Paint-card-drop"><img src="./drop-grey.png" alt="paintdrop"/></div>
+        </div>
         <div className="Paint-card-title">{props.paint.colorName}</div>
         <div className="Paint-card-type">{props.paint.paintType}</div>
         <div className="Paint-card-owned">{props.paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>

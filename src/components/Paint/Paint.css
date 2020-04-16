@@ -22,13 +22,36 @@
     cursor: zoom-in;
 }
 
-.Paint-card-title {
-    grid-column-start: 1;
+img {
+    height: 4vmin;
+    width: 4vmin;
+}
+
+.Paint-card-drop-div {
+    grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
 
-    background-color: rgb(238,99,94);
+    background-color: rgb(126, 126, 126);
+
+    padding-top: .5vmin;
+    padding-left: 4vmin;
+}
+
+.Paint-card-drop {
+    background-color: rgb(201, 72, 68);
+    width: 4vmin;
+    height: 4vmin;
+}
+
+.Paint-card-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    background-color: rgb(126, 126, 126);
 
     color: white;
     font-weight: bold;
@@ -38,7 +61,7 @@
 
 .Paint-card-type {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
 
@@ -79,7 +102,7 @@
     background-color: white;
 
     border-width: 0vmin;
-    border-radius: 50%;
+    border-radius: 25%;
 
     font-weight: bold;
     color: rgb(201, 72, 68);
