@@ -7,13 +7,13 @@ const Paint = (props) => {
       <div className="Paint-card">
         <div className="Paint-card-title">{props.paint.colorName}</div>
         <div className="Paint-card-type">{props.paint.paintType}</div>
-        <div className="Paint-card-owned">{props.paint.isOwned ? 'Owned' : 'Not Owned'}</div>
+        <div className="Paint-card-owned">{props.paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>
         <div className="Paint-card-btn">
           <button
             className="btn"
             onClick={() => props.handleDeletePaint(props.idx)}
           >
-            X
+            x
           </button>
         </div>
       </div>

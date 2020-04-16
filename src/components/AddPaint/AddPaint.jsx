@@ -58,7 +58,7 @@ class AddPaint extends Component {
                     <option>Technical</option>
                 </select>
                 <br></br><br></br>
-                <span>Have it?</span>
+                <span>In Collection?</span>
                 <br></br>
                 <input
                     type="checkbox"
