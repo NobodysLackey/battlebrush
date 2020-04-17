@@ -3,5 +3,18 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+}
+
+.logo {
+  height: 50vmin;
+  width: 50vmin;
+}
+
+.welcome {
+  color: white;
+}
+
+.intro {
+  width: 80vmin;
+  color: rgb(38, 38, 38);
 }

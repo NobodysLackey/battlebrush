@@ -6,7 +6,9 @@ const PaintList = (props) => {
   if(props.paints.length){
     return (
       <>
-        <div><h3>Paint List</h3></div>
+        <div className="title">
+          <h2>Paint List</h2>
+        </div>
         <div className="PaintList">
           {props.paints.map((paint, idx) =>
             <div>
@@ -24,7 +26,7 @@ const PaintList = (props) => {
     )
   } else {
     return (
-      <h3>You don't have any paints stored!</h3>
+      <h3 className="title">You don't have any paints stored!</h3>
     )
   }
 };

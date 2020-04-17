@@ -111,8 +111,14 @@ class App extends Component {
               <Redirect to='/login'/>
           }/>
           <Route exact path='/' render={() =>
-            <div className="welcome">
-              <h1>Welcome to Battle Brush!</h1>
+            <div>
+              <center>
+              <h1 className="welcome">Welcome to Battle Brush!</h1>
+              <div className="intro">
+                <h5>Use this app to keep track of all of your miniature wargmaing paints. Never overbuy again! With the Battle Brush app, you'll always know exactly which paints you have on your rack at home.</h5>
+              </div>
+              <img className="logo" src="/logo512.png" alt="logo"></img>
+              </center>
             </div>
           }/>
         </Switch>

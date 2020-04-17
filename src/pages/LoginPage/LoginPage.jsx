@@ -34,10 +34,14 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
-        <header>Log In</header>
+        <header className="title">
+          <h2>Log In</h2>
+        </header>
+        <center>
         <form onSubmit={this.handleSubmit} >
           <div>
             <input 
+              className="input"
               type="email" 
               placeholder="Email"
               value={this.state.email} 
@@ -45,8 +49,10 @@ class LoginPage extends Component {
               onChange={this.handleChange} 
             />
           </div>
+          <br></br>
           <div>
-            <input 
+            <input
+              className="input"
               type="password"
               placeholder="Password" 
               value={this.state.pw} 
@@ -54,12 +60,14 @@ class LoginPage extends Component {
               onChange={this.handleChange} 
             />
           </div>
+          <br></br>
           <div>
             <button>Log In</button>
             &nbsp;&nbsp;&nbsp;
             <Link to='/'>Cancel</Link>
           </div>
         </form>
+        </center>
       </div>
     );
   }

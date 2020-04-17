@@ -30,7 +30,9 @@ class UpdatePaintPage extends Component {
   render() {
     return (
       <>
-        <h3>Update "{this.state.formData.colorName}"</h3>
+        <div className="title">
+          <h2>Update "{this.state.formData.colorName}"</h2>
+        </div>
         <center>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <span>Paint Name</span>

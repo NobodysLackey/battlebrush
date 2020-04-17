@@ -14,12 +14,13 @@
     border: solid;
     border-color: black;
     border-width: .3vmin;
+
+    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
 }
 
 .Paint-card:hover {
-    background-color: rgb(172, 172, 172);
-
-    cursor: zoom-in;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(228, 228, 228);
 }
 
 img {
@@ -40,7 +41,15 @@ img {
 }
 
 .Paint-card-drop {
-    background-color: rgb(201, 72, 68);
+    background-color: rgb(255, 255, 255);
+    width: 4vmin;
+    height: 4vmin;
+}
+
+.Paint-card-drop:hover {
+    background: rgb(255,87,88);
+    background: linear-gradient(180deg, rgba(255,87,88,1) 0%, rgba(201,72,68,1) 100%);
+    
     width: 4vmin;
     height: 4vmin;
 }
@@ -103,7 +112,7 @@ img {
 
 .delete-btn:hover {
     font-weight: bold;
-    color: white;
+    color: rgb(255, 87, 88);
 
     cursor: pointer;
 }
@@ -124,7 +133,7 @@ img {
 
 .update-btn:hover {
     font-weight: bold;
-    color: white;
+    color: rgb(255, 87, 88);
 
     cursor: pointer;
 }

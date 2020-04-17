@@ -4,7 +4,15 @@
 
 .input-field {
     border: solid;
-    border-color: rgb(201, 72, 68);
+    border-color: black;
     border-width: .25vmin;
     text-align: center;
+}
+
+.title {
+    color: white;
+}
+
+.btn {
+    
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import * as userAPI from '../../services/user-api';
+import './SignupForm.css'
 
 class SignupForm extends Component {
 
@@ -40,10 +41,14 @@ class SignupForm extends Component {
   render() {
     return (
       <div>
-        <header>Sign Up</header>
+        <center>
+        <header>
+          <h2 className="title">Sign Up</h2>
+        </header>
         <form onSubmit={this.handleSubmit} >
           <div>
-            <input 
+            <input
+              className="input"
               type="text"
               placeholder="Name" 
               value={this.state.name} 
@@ -51,8 +56,10 @@ class SignupForm extends Component {
               onChange={this.handleChange} 
             />
           </div>
+          <br></br>
           <div>
             <input 
+              className="input"
               type="email"
               placeholder="Email" 
               value={this.state.email} 
@@ -60,8 +67,10 @@ class SignupForm extends Component {
               onChange={this.handleChange}
             />
           </div>
+          <br></br>
           <div>
             <input 
+              className="input"
               type="password" 
               placeholder="Password" 
               value={this.state.password} 
@@ -69,8 +78,10 @@ class SignupForm extends Component {
               onChange={this.handleChange} 
             />
           </div>
+          <br></br>
           <div className="form-group">
             <input 
+              className="input"
               type="password" 
               placeholder="Confirm Password" 
               value={this.state.passwordConf} 
@@ -78,6 +89,7 @@ class SignupForm extends Component {
               onChange={this.handleChange} 
             />
           </div>
+          <br></br>
           <div>
             <button 
               className="btn btn-default" 
@@ -89,6 +101,7 @@ class SignupForm extends Component {
             <Link to='/'>Cancel</Link>
           </div>
         </form>
+        </center>
       </div>
     );
   }

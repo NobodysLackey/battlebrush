@@ -83,79 +83,87 @@ class AddPaint extends Component {
           });
 
         return (
-            <form
-                className="form"
-                onSubmit={this.handleSubmit}
-            >
-                <span>Paint Name</span>
-                <br></br><br></br>
-                <input
-                    className="input-field"
-                    type="text"
-                    name="colorName"
-                    value={this.state.formData.colorName}
-                    onChange={this.handleChange}
-                    autoComplete="off"
-                />
-                <br></br><br></br><br></br>
-                <span>Color</span>
-                <br></br><br></br>
-                <div>
-                    <div
-                        style={ styles.swatch }
-                        onClick={ this.handleClick }
-                    >
-                    <div 
-                        style={ styles.color }
+            <>
+                <div className="title">
+                    <h2>Add a Paint</h2>
+                </div>
+                <center>
+                <form
+                    className="form"
+                    onSubmit={this.handleSubmit}
+                >
+                    <span>Paint Name</span>
+                    <br></br><br></br>
+                    <input
+                        className="input-field"
+                        type="text"
+                        name="colorName"
+                        value={this.state.formData.colorName}
+                        onChange={this.handleChange}
+                        autoComplete="off"
                     />
-                    </div>
-                    { this.state.displayColorPicker ? 
+                    <br></br><br></br><br></br>
+                    <span>Color</span>
+                    <br></br><br></br>
+                    <div>
                         <div
-                            style={ styles.popover }
+                            style={ styles.swatch }
+                            onClick={ this.handleClick }
                         >
                         <div 
-                            style={ styles.cover }
-                            onClick={ this.handleClose }
+                            style={ styles.color }
                         />
-                        <SketchPicker
-                            color={ this.state.color } onChange={ this.handleColorChange }
-                        />
-                        </div> 
-                    : 
-                        null
-                    }
-                </div>
-                <br></br><br></br><br></br>
-                <span>Type</span>
-                <br></br><br></br>
-                <select
-                    className="input-field"
-                    type="text"
-                    name="paintType"
-                    onChange={this.handleChange}
-                >
-                    <option>-</option>
-                    <option>Base</option>
-                    <option>Shade</option>
-                    <option>Layer</option>
-                    <option>Edge</option>
-                    <option>Glaze</option>
-                    <option>Technical</option>
-                </select>
-                <br></br><br></br><br></br>
-                <span>In Collection?</span>&nbsp;&nbsp;
-                <input
-                    type="checkbox"
-                    name="isOwned"
-                    value={this.state.formData.isOwned}
-                    onChange={this.handleChange}
-                />
-                <br></br><br></br>
-                <input
-                    type="submit"
-                    value="Add"
-                />
-            </form>
+                        </div>
+                        { this.state.displayColorPicker ? 
+                            <div
+                                style={ styles.popover }
+                            >
+                            <div 
+                                style={ styles.cover }
+                                onClick={ this.handleClose }
+                            />
+                            <SketchPicker
+                                color={ this.state.color } onChange={ this.handleColorChange }
+                            />
+                            </div> 
+                        : 
+                            null
+                        }
+                    </div>
+                    <br></br><br></br><br></br>
+                    <span>Type</span>
+                    <br></br><br></br>
+                    <select
+                        className="input-field"
+                        type="text"
+                        name="paintType"
+                        onChange={this.handleChange}
+                    >
+                        <option>-</option>
+                        <option>Base</option>
+                        <option>Shade</option>
+                        <option>Layer</option>
+                        <option>Edge</option>
+                        <option>Glaze</option>
+                        <option>Technical</option>
+                    </select>
+                    <br></br><br></br><br></br>
+                    <span>In Collection?</span>&nbsp;&nbsp;
+                    <input
+                        type="checkbox"
+                        name="isOwned"
+                        value={this.state.formData.isOwned}
+                        onChange={this.handleChange}
+                    />
+                    <br></br><br></br>
+                    <input
+                        className="btn"
+                        type="submit"
+                        value="Add"
+                    />
+                </form>
+                </center>
+            </>
         )
     }
 }
