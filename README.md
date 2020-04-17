@@ -3,7 +3,7 @@
 ### Date: 4/20/2020
 
 #### By: Michael Lackey
-#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/)
+#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/) | [GA Profile](https://profiles.generalassemb.ly/michaellackey)
 ***
 
 ### ***Description***
@@ -37,14 +37,17 @@
 
 ###### Wireframe
 ![Wireframe]()
+
+###### Screenshot
+![Screenshot]()
 ***
 
 ### ***User Experience***
 
 #### User Story #1
-##### A brief description of someone and why they would engage with this project.
+##### Michael loves to paint, but everytime he's at the hobby store he buys paint colors he already has. He needs a way to keep track of which paints he has and which paints he wants.
 #### User Story #2
-##### A brief description of someone and why they would engage with this project.
+##### Aaron runs a hobby supply store. He wants to keep track of which paints he has in stock, and which he needs to order.
 #### As a user...
 * ##### I should be able to sign up as a new user.
 * ##### I should be able to log in with my new account.
@@ -59,7 +62,7 @@
 
 - [ ] Consume data from a third-party API
 - [ ] Implement additional functionality if the user is an admin
-- [ ] Make app scale for mobile 
+- [ ] Make app scale for mobile
 ***
 
 ### ***Credits***

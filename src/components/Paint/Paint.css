@@ -66,7 +66,7 @@ img {
 
     color: white;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.75vmin;
     line-height: 5vmin;
 
     padding: .25vmin;
@@ -80,7 +80,7 @@ img {
 
     color: rgb(38, 38, 38);
     font-style: italic;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     line-height: 5vmin;
 }
 
@@ -91,7 +91,7 @@ img {
     grid-row-end: 4;
 
     color: rgb(38, 38, 38);
-    font-size: 1.75vmin;
+    font-size: 1.5vmin;
     line-height: 5vmin;
     text-align: left;
 
