@@ -20,7 +20,7 @@
 
 .Paint-card:hover {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(56, 126, 255);
+    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(187, 187, 187);
 }
 
 img {
@@ -66,7 +66,7 @@ img {
 
     color: white;
     font-weight: bold;
-    font-size: 1.1vw;
+    font-size: 2vw;
     line-height: 5vmin;
 
     padding: .25vmin;

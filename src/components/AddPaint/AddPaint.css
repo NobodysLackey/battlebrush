@@ -9,6 +9,8 @@
     border-radius: .5vmin;
     text-align: center;
 
+    font-size: 2vmin;
+
     padding: 1vmin;
   
     height: 3vmin;
@@ -22,7 +24,7 @@
     border-radius: .5vmin;
     text-align: center;
 
-    height: 3vmin;
+    height: 5vmin;
     width: 15vmin;
 }
 

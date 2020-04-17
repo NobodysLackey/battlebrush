@@ -1,3 +1,37 @@
+.form {
+    text-align: center;
+}
+
+.input {
+    border: solid;
+    border-color: rgb(62, 62, 62);
+    border-width: .25vmin;
+    border-radius: .5vmin;
+    text-align: center;
+
+    font-size: 2vmin;
+
+    padding: 1vmin;
+  
+    height: 3vmin;
+    width: 25vmin;
+}
+
+.select {
+    border: solid;
+    border-color: rgb(62, 62, 62);
+    border-width: .25vmin;
+    border-radius: .5vmin;
+    text-align: center;
+
+    height: 5vmin;
+    width: 15vmin;
+}
+
+.title {
+    color: rgb(62, 62, 62);
+}
+
 .btn {
     background-color:  rgb(234, 234, 234);
     

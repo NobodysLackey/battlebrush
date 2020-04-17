@@ -16,7 +16,7 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
             <img src="./drop-grey.png" alt="paintdrop"/>
           </div>
         </div>
-        <div className="Paint-card-title">{paint.colorName}</div>
+        <div className="Paint-card-title" >{paint.colorName}</div>
         <div className="Paint-card-type">{paint.paintType}</div>
         <div className="Paint-card-owned">{paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>
         <Link

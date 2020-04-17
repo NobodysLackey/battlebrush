@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
-import { SwatchesPicker } from 'react-color';
+import { SketchPicker } from 'react-color';
+import reactCSS from 'reactcss';
 import './UpdatePaintPage.css';
 
 class UpdatePaintPage extends Component {
   state = {
     invalidForm: false,
     formData: this.props.location.state.paint,
-    idx: this.props.location.idx
+    idx: this.props.location.idx,
+    displayColorPicker: false,
+    color: this.props.location.state.paint.color
   };
 
   formRef = React.createRef();
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleUpdatePaint(this.state.formData, this.state.idx, this.props.location.state.paint._id);
+    let allData = this.state.formData
+    allData['color'] = this.state.color
+    this.props.handleUpdatePaint(allData, this.state.idx, this.props.location.state.paint._id);
   };
 
   handleChange = e => {
@@ -27,7 +32,57 @@ class UpdatePaintPage extends Component {
     });
   };
 
+  handleClick = () => {
+    this.setState({ 
+        displayColorPicker: !this.state.displayColorPicker
+    })
+  };
+
+  handleClose = () => {
+      this.setState({
+          displayColorPicker: false
+      })
+  };
+
+  handleColorChange = (color) => {
+      this.setState({
+          color: color.rgb
+      })
+  };
+
   render() {
+    const styles = reactCSS({
+      'default': {
+        color: {
+          width: '8vmin',
+          height: '3.5vmin',
+          borderRadius: '.5vmin',          
+          background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
+        },
+        swatch: {
+          padding: '5px',
+          background: '#fff',
+          border: 'solid',
+          borderWidth: '.25vmin',
+          borderRadius: '.5vmin',
+          boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
+          display: 'inline-block',
+          cursor: 'pointer',
+        },
+        popover: {
+          position: 'absolute',
+          zIndex: '2',
+        },
+        cover: {
+          position: 'fixed',
+          top: '0px',
+          right: '0px',
+          bottom: '0px',
+          left: '0px',
+        },
+      },
+    });
+
     return (
       <>
         <div className="title">
@@ -38,7 +93,7 @@ class UpdatePaintPage extends Component {
           <span>Paint Name</span>
                 <br></br><br></br>
                 <input
-                    className="input-field"
+                    className="input"
                     type="text"
                     name="colorName"
                     value={this.state.formData.colorName}
@@ -48,17 +103,36 @@ class UpdatePaintPage extends Component {
                 <br></br><br></br>
             <span>Color</span>
             <br></br><br></br>
-              <SwatchesPicker
-                color= {this.state.color}
-                onChangeComplete = {this.handleChangeComplete}
-                width = {220}
-                height = {150}
-              />
+              <div>
+                <div
+                    style={ styles.swatch }
+                    onClick={ this.handleClick }
+                >
+                <div 
+                    style={ styles.color }
+                />
+                </div>
+                { this.state.displayColorPicker ? 
+                    <div
+                        style={ styles.popover }
+                    >
+                    <div 
+                        style={ styles.cover }
+                        onClick={ this.handleClose }
+                    />
+                    <SketchPicker
+                        color={ this.state.color } onChange={ this.handleColorChange }
+                    />
+                    </div> 
+                : 
+                    null
+                }
+              </div>
             <br></br><br></br>
             <label>Type</label>
             <br></br><br></br>
             <select
-                className="input-field"
+                className="select"
                 type="text"
                 name="paintType"
                 value={this.state.formData.paintType}
@@ -77,7 +151,7 @@ class UpdatePaintPage extends Component {
             &nbsp;&nbsp;
             <input
               type="checkbox"
-              className="form-control"
+              className="switch"
               name="isOwned"
               checked={this.state.formData.isOwned}
               value={this.state.formData.isOwned}

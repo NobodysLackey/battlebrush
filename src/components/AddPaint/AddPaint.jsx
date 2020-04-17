@@ -51,21 +51,22 @@ class AddPaint extends Component {
             color: color.rgb
         })
     };
-    
 
     render() {
         const styles = reactCSS({
             'default': {
               color: {
-                width: '36px',
-                height: '14px',
-                borderRadius: '2px',
+                width: '8vmin',
+                height: '3.5vmin',
+                borderRadius: '.5vmin',          
                 background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
               },
               swatch: {
                 padding: '5px',
                 background: '#fff',
-                borderRadius: '1px',
+                border: 'solid',
+                borderWidth: '.25vmin',
+                borderRadius: '.5vmin',
                 boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
                 display: 'inline-block',
                 cursor: 'pointer',
