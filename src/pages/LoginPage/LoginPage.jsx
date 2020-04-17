@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './LoginPage.css';
 import * as userAPI from '../../services/user-api';
 
@@ -35,7 +34,7 @@ class LoginPage extends Component {
     return (
       <div className="LoginPage">
         <header className="title">
-          <h2>Log In</h2>
+          <h2>Sign In</h2>
         </header>
         <center>
         <form onSubmit={this.handleSubmit} >
@@ -64,7 +63,7 @@ class LoginPage extends Component {
           </div>
           <br></br>
           <div>
-            <button className="btn">LOG IN</button>
+            <button className="btn">SIGN IN</button>
             &nbsp;&nbsp;&nbsp;
             <input
               type="submit"

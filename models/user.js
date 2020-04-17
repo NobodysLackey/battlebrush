@@ -13,7 +13,8 @@ const paintSchema = new mongoose.Schema({
     type: String,
     enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze'],
     default: 'Layer'
-  }
+  },
+  color: {}
 }, {
   timestamps: true
 });

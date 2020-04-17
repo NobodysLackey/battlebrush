@@ -5,32 +5,32 @@ import './NavBar.css';
 const NavBar = (props) => {
   let nav = props.user ?
     <div className='NavBar'>
-      <div className="logo">
+      <div>
         <a href="/">
           <img className="navlogo" src="../logo192.png" alt="logo"></img>
         </a>
       </div>
       <div className="links">
-        <Link to='/' className='NavBar-link'>Home</Link>
+        <Link to='/' className='NavBar-link'>HOME</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/paintlist' className='NavBar-link'>Paints</Link>
+        <Link to='/paintlist' className='NavBar-link'>PAINTS</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/addpaint' className='NavBar-link'>Add</Link>
+        <Link to='/addpaint' className='NavBar-link'>ADD</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/profile' className='NavBar-link'>Profile</Link>
+        <Link to='/profile' className='NavBar-link'>PROFILE</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>
+        <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOGOUT</Link>
       </div>
     </div>
     :
     <div className='NavBar'>
-      <div className="logo">
-        <img src="./logo192.png" alt="logo"></img>
+      <div>
+        <img className="navlogo" src="./logo192.png" alt="logo"></img>
       </div>
       <div className="links">
-        <Link to='/login' className='NavBar-link'>Login</Link>
+        <Link to='/login' className='NavBar-link'>SIGN IN</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/signup' className='NavBar-link'>Sign up</Link>
+        <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
       </div>;
     </div>
   return (

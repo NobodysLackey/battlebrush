@@ -29,7 +29,9 @@ class AddPaint extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.handleAddPaint(this.state.formData)
+        let allData = this.state.formData
+        allData['color'] = this.state.color
+        this.props.handleAddPaint(allData)
     }
 
     handleClick = () => {
