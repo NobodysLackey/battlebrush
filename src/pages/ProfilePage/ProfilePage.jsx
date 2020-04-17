@@ -1,11 +1,13 @@
 import React from 'react';
+import './ProfilePage.css';
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
   return (
     <div>
-      <h3>This is the Profile Page!</h3>
-      <p>It is located at src/pages/ProfilePage/ProfilePage.jsx</p>
-      <p>If you can view this page, it is likely that you have successfully logged a user in!</p>
+      <center>
+        <h3 className="title">Thank you for using Battle Brush, {props.user.name}!</h3>
+        <p>Email: {props.user.email}</p>
+      </center>
     </div>
   );
 };

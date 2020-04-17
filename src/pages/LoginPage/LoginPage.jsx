@@ -42,6 +42,7 @@ class LoginPage extends Component {
           <div>
             <input 
               className="input"
+              autoComplete="off"
               type="email" 
               placeholder="Email"
               value={this.state.email} 
@@ -53,6 +54,7 @@ class LoginPage extends Component {
           <div>
             <input
               className="input"
+              autoComplete="off"
               type="password"
               placeholder="Password" 
               value={this.state.pw} 

@@ -106,7 +106,9 @@ class App extends Component {
           } />
           <Route exact path='/profile' render={() => 
             userAPI.getUser() ? 
-              <ProfilePage />
+              <ProfilePage 
+                user = {this.state.user}
+              />
             :
               <Redirect to='/login'/>
           }/>
@@ -115,7 +117,7 @@ class App extends Component {
               <center>
               <h1 className="welcome">Welcome to Battle Brush!</h1>
               <div className="intro">
-                <h5>Use this app to keep track of all of your miniature wargmaing paints. Never overbuy again! With the Battle Brush app, you'll always know exactly which paints you have on your rack at home.</h5>
+                <h5>Use this app to keep track of all of your miniature wargaming paints. Never overbuy again! With the Battle Brush app, you'll always know exactly which paints you have on your rack at home.</h5>
               </div>
               <img className="logo" src="/logo512.png" alt="logo"></img>
               </center>
