@@ -84,10 +84,10 @@ class AddPaint extends Component {
 
         return (
             <>
+                <center>
                 <div className="title">
                     <h2>Add a Paint</h2>
                 </div>
-                <center>
                 <form
                     className="form"
                     onSubmit={this.handleSubmit}
@@ -95,7 +95,7 @@ class AddPaint extends Component {
                     <span>Paint Name</span>
                     <br></br><br></br>
                     <input
-                        className="input-field"
+                        className="input"
                         type="text"
                         name="colorName"
                         value={this.state.formData.colorName}
@@ -134,7 +134,7 @@ class AddPaint extends Component {
                     <span>Type</span>
                     <br></br><br></br>
                     <select
-                        className="input-field"
+                        className="select"
                         type="text"
                         name="paintType"
                         onChange={this.handleChange}
@@ -150,6 +150,7 @@ class AddPaint extends Component {
                     <br></br><br></br><br></br>
                     <span>In Collection?</span>&nbsp;&nbsp;
                     <input
+                        className="check"
                         type="checkbox"
                         name="isOwned"
                         value={this.state.formData.isOwned}
@@ -159,7 +160,7 @@ class AddPaint extends Component {
                     <input
                         className="btn"
                         type="submit"
-                        value="Add"
+                        value="ADD"
                     />
                 </form>
                 </center>

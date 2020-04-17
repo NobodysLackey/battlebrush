@@ -12,7 +12,7 @@
     text-decoration: none;
 
     border: solid;
-    border-color: black;
+    border-color: rgb(38, 38, 38);
     border-width: .3vmin;
 
     box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
@@ -77,7 +77,7 @@ img {
     grid-row-start: 2;
     grid-row-end: 3;
 
-    color: black;
+    color: rgb(38, 38, 38);
     font-style: italic;
     font-size: 2vmin;
     line-height: 5vmin;
@@ -89,7 +89,7 @@ img {
     grid-row-start: 3;
     grid-row-end: 4;
 
-    color: black;
+    color: rgb(38, 38, 38);
     font-size: 1.75vmin;
     line-height: 5vmin;
     text-align: left;
@@ -108,14 +108,14 @@ img {
     font-size: 1.5vmin;
     line-height: 5vmin;
     font-weight: bold;
-    color: rgb(201, 72, 68);
+    color: rgb(38, 38, 38);
     text-decoration: none;
     text-align: center;
 }
 
 .delete-btn:hover {
     font-weight: bold;
-    color: rgb(255, 87, 88);
+    color: rgb(255, 78, 78);
 
     cursor: pointer;
 }
@@ -129,14 +129,14 @@ img {
     font-size: 1.5vmin;
     line-height: 5vmin;
     font-weight: bold;
-    color: rgb(201, 72, 68);
+    color: rgb(38, 38, 38);
     text-decoration: none;
     text-align: center;
 }
 
 .update-btn:hover {
     font-weight: bold;
-    color: rgb(255, 87, 88);
+    color: rgb(43, 103, 255);
 
     cursor: pointer;
 }

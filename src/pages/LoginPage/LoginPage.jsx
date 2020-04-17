@@ -64,9 +64,14 @@ class LoginPage extends Component {
           </div>
           <br></br>
           <div>
-            <button>Log In</button>
+            <button className="btn">LOG IN</button>
             &nbsp;&nbsp;&nbsp;
-            <Link to='/'>Cancel</Link>
+            <input
+              type="submit"
+              value="CANCEL"
+              className="btn"
+            >
+            </input>
           </div>
         </form>
         </center>

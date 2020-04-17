@@ -6,7 +6,9 @@ const NavBar = (props) => {
   let nav = props.user ?
     <div className='NavBar'>
       <div className="logo">
-        <img className="navlogo" src="../logo192.png" alt="logo"></img>
+        <a href="/">
+          <img className="navlogo" src="../logo192.png" alt="logo"></img>
+        </a>
       </div>
       <div className="links">
         <Link to='/' className='NavBar-link'>Home</Link>

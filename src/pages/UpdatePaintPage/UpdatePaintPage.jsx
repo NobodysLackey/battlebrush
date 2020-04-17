@@ -45,7 +45,7 @@ class UpdatePaintPage extends Component {
                     onChange={this.handleChange}
                     autoComplete="off"
                 />
-                <br></br><br></br><br></br>
+                <br></br><br></br>
             <span>Color</span>
             <br></br><br></br>
               <SwatchesPicker
@@ -54,7 +54,7 @@ class UpdatePaintPage extends Component {
                 width = {220}
                 height = {150}
               />
-            <br></br><br></br><br></br>
+            <br></br><br></br>
             <label>Type</label>
             <br></br><br></br>
             <select
@@ -72,7 +72,7 @@ class UpdatePaintPage extends Component {
                 <option>Glaze</option>
                 <option>Technical</option>
             </select>
-            <br></br><br></br><br></br>
+            <br></br><br></br>
             <label>In Collection?</label>
             &nbsp;&nbsp;
             <input
@@ -83,7 +83,7 @@ class UpdatePaintPage extends Component {
               value={this.state.formData.isOwned}
               onChange={this.handleChange}
             />
-            <br></br><br></br><br></br>
+            <br></br><br></br>
             <button
               type="submit"
               className="btn"
