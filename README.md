@@ -49,4 +49,5 @@
 ### ***Credits***
 
 ##### App Scaffolding: [Chajr](https://github.com/davidstinson/chajr)
+##### Color Picker: [React Color](https://casesandberg.github.io/react-color/)
 ***
