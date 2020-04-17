@@ -32,30 +32,11 @@
 
 ### ***Screenshots***
 
-###### Entity Relationship Diagram
-![ERD](public/erd.png)
-
 ###### Welcome Page
 ![Welcome Page](public/screenshot1.png)
 
 ###### Paint List
 ![Paint List](public/screenshot2.png)
-***
-
-### ***User Experience***
-
-#### User Story #1
-##### Michael loves to paint, but everytime he's at the hobby store he buys paint colors he already has. He needs a way to keep track of which paints he has and which paints he wants.
-#### User Story #2
-##### Aaron runs a hobby supply store. He wants to keep track of which paints he has in stock, and which he needs to order.
-#### As a user...
-* ##### I should be able to sign up as a new user.
-* ##### I should be able to log in with my new account.
-* ##### I should be able to create a new paint.
-* ##### I should be able to view the details of my paint.
-* ##### I should be able to edit my paint.
-* ##### I should be able to remove a paint.
-* ##### I should be able to log out of my account.
 ***
 
 ### ***Future Updates***
