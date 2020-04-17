@@ -8,6 +8,7 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
     <React.Fragment>
       <div className="Paint-card">
       <div className="Paint-card-drop-div">
+        
           <div 
             className="Paint-card-drop"
             style={{"backgroundColor":`rgba(${paint.color.r}, ${paint.color.g}, ${paint.color.b}, ${paint.color.a})`}}
