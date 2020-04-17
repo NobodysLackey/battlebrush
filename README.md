@@ -27,7 +27,7 @@
 
 ##### Start by signing up a new user and then begin adding paints to your list!
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/g6V7Aji2/battlebrush).
-##### The project itself was deployed using Heroku and can be viewed [here]().
+##### The project itself was deployed using Heroku and can be viewed [here](https://battlebrush.herokuapp.com/).
 ***
 
 ### ***Screenshots***
@@ -35,11 +35,11 @@
 ###### Entity Relationship Diagram
 ![ERD](public/erd.png)
 
-###### Wireframe
-![Wireframe]()
+###### Welcome Page
+![Welcome Page](public/screenshot1.png)
 
-###### Screenshot
-![Screenshot]()
+###### Paint List
+![Paint List](public/screenshot2.png)
 ***
 
 ### ***User Experience***
