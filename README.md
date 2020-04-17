@@ -60,9 +60,9 @@
 
 ### ***Future Updates***
 
+- [x] ~~Make app scale for mobile~~
 - [ ] Consume data from a third-party API
 - [ ] Implement additional functionality if the user is an admin
-- [ ] Make app scale for mobile
 ***
 
 ### ***Credits***
