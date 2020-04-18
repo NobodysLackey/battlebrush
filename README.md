@@ -1,4 +1,4 @@
-# **Battlebrush**
+# **Battle Brush**
 
 ### Date: 4/20/2020
 
@@ -8,7 +8,7 @@
 
 ### ***Description***
 
-##### A full-stack MERN application for tracking miniature wargaming paints.
+##### A full-stack MERN application for tracking miniature wargaming hobby paints.
 ***
 
 ### ***Technologies Used***
@@ -42,6 +42,10 @@
 ### ***Future Updates***
 
 - [x] ~~Make app scale for mobile~~
+- [ ] Add sorting/searching
+- [ ] Add ability to create 'swatches' for paint progressions
+- [ ] Let users search through all added paints and add others' created paints to their collection
+- [ ] Add 'brand' to the Paint model
 - [ ] Consume data from a third-party API
 - [ ] Implement additional functionality if the user is an admin
 ***

@@ -28,7 +28,7 @@ const PaintList = (props) => {
     return (
       <h3 className="title">You don't have any paints stored!</h3>
     )
-  }
+  };
 };
  
 export default PaintList;

@@ -39,6 +39,6 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
       <br></br>
     </React.Fragment>
   );
-}
+};
  
 export default Paint;

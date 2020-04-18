@@ -25,20 +25,20 @@ class AddPaint extends Component {
         }this.setState({
             formData: {...this.state.formData,[e.target.name]:e.target.value}
         })
-    }
+    };
 
     handleSubmit = (e) => {
         e.preventDefault()
         let allData = this.state.formData
         allData['color'] = this.state.color
         this.props.handleAddPaint(allData)
-    }
+    };
 
     handleClick = () => {
         this.setState({ 
             displayColorPicker: !this.state.displayColorPicker
         })
-      };
+    };
     
     handleClose = () => {
         this.setState({
@@ -55,35 +55,35 @@ class AddPaint extends Component {
     render() {
         const styles = reactCSS({
             'default': {
-              color: {
-                width: '8vmin',
-                height: '3.5vmin',
-                borderRadius: '.5vmin',          
-                background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
-              },
-              swatch: {
-                padding: '5px',
-                background: '#fff',
-                border: 'solid',
-                borderWidth: '.25vmin',
-                borderRadius: '.5vmin',
-                boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
-                display: 'inline-block',
-                cursor: 'pointer',
-              },
-              popover: {
-                position: 'absolute',
-                zIndex: '2',
-              },
-              cover: {
-                position: 'fixed',
-                top: '0px',
-                right: '0px',
-                bottom: '0px',
-                left: '0px',
-              },
+                color: {
+                    width: '8vmin',
+                    height: '3.5vmin',
+                    borderRadius: '.5vmin',          
+                    background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
+                },
+                swatch: {
+                    padding: '5px',
+                    background: '#fff',
+                    border: 'solid',
+                    borderWidth: '.25vmin',
+                    borderRadius: '.5vmin',
+                    boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
+                    display: 'inline-block',
+                    cursor: 'pointer',
+                },
+                popover: {
+                    position: 'absolute',
+                    zIndex: '2',
+                },
+                cover: {
+                    position: 'fixed',
+                    top: '0px',
+                    right: '0px',
+                    bottom: '0px',
+                    left: '0px',
+                },
             },
-          });
+        });
 
         return (
             <>
@@ -168,8 +168,8 @@ class AddPaint extends Component {
                 </form>
                 </center>
             </>
-        )
-    }
-}
+        );
+    };
+};
 
 export default AddPaint;

@@ -14,10 +14,9 @@ async function signup(req, res) {
     const token = createJWT(user);
     res.json({ token });
   } catch (err) {
-    // Probably a duplicate email
     res.status(400).json(err);
   }
-}
+};
 
 async function login(req, res) {
   try {
@@ -34,14 +33,12 @@ async function login(req, res) {
   } catch (err) {
     return res.status(401).json(err);
   }
-}
-
-/*----- Helper Functions -----*/
+};
 
 function createJWT(user) {
   return jwt.sign(
-    {user}, // data payload
+    {user},
     SECRET,
     {expiresIn: '24h'}
   );
-}
+};

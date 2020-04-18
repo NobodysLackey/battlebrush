@@ -38,7 +38,7 @@ class App extends Component {
     this.setState(state => ({
       paints: [...this.state.paints, newPaint]
     }), () => this.props.history.push('/paintlist'));
-  }
+  };
 
   handleDeletePaint = async (id) => {
     const deletedPaint = await paintAPI.deleteOne(id);
@@ -49,7 +49,7 @@ class App extends Component {
     this.setState({
       paints
     });
-  }
+  };
 
   handleUpdatePaint = async (updatedPaintData, idx, id) => {
     const updatedPaint = await paintAPI.update(updatedPaintData, idx);
@@ -60,7 +60,7 @@ class App extends Component {
         {paints: newPaintsArray},
         () => this.props.history.push('/paintlist')
       );
-  }
+  };
 
   render() {
     return (
@@ -126,7 +126,7 @@ class App extends Component {
         </Switch>
       </div>
     );
-  }
+  };
 };
 
 export default App;

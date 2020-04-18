@@ -32,11 +32,11 @@ function create(req, res) {
 
 async function update(req, res) {
   const user = await User.findById(req.user._id);
-  let paintToUpdate = user.paints.splice(req.params.idx, 1, req.body);
-  user.save(function(err) {
+  user.paints.splice(req.params.idx, 1, req.body);
+  user.save((err) => {
       res.status(200).json(user.paints[req.params.idx])
   })
-}
+};
 
 function deleteOne(req, res) {
   User.findById(req.user._id, (err, user) => {

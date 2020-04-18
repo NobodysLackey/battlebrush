@@ -10,6 +10,6 @@ const PaintsSecretPage = () => {
       <p>You could use this page as a base to start working from or delete it for a fresh start. Happy building!</p>
     </React.Fragment>
   );
-}
+};
  
 export default PaintsSecretPage;

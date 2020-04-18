@@ -6,7 +6,7 @@ const ProfilePage = (props) => {
     <div>
       <center>
         <h3 className="title">Thank you for using Battle Brush, {props.user.name}!</h3>
-        <p>Email: {props.user.email}</p>
+        <p>The email that you used to sign up with us is {props.user.email}.</p>
       </center>
     </div>
   );

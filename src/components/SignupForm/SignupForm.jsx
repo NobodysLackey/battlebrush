@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as userAPI from '../../services/user-api';
-import './SignupForm.css'
+import './SignupForm.css';
 
 class SignupForm extends Component {
 
@@ -14,28 +14,24 @@ class SignupForm extends Component {
   handleChange = (e) => {
     this.props.updateMessage('');
     this.setState({
-      // Using ES2015 Computed Property Names
       [e.target.name]: e.target.value
     });
-  }
+  };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await userAPI.signup(this.state);
-      // Let <App> know a user has signed up!
       this.props.handleSignupOrLogin();
-      // Successfully signed up - show GamePage
       this.props.history.push('/');
     } catch (err) {
-      // Invalid user data (probably duplicate email)
       this.props.updateMessage(err.message);
     }
-  }
+  };
 
   isFormInvalid() {
     return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
-  }
+  };
 
   render() {
     return (
@@ -112,7 +108,7 @@ class SignupForm extends Component {
         </center>
       </div>
     );
-  }
-}
+  };
+};
 
 export default SignupForm;

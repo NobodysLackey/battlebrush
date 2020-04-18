@@ -29,30 +29,25 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.set('toJSON', {
-  transform: function(doc, ret) {
-    // remove the password property when serializing doc to JSON
+  transform: (doc, ret) => {
     delete ret.password;
     delete ret.paints;
     return ret;
   }
 });
 
-userSchema.pre('save', function(next) {
-  // 'this' will be set to the current document
+userSchema.pre('save', (next) => {
   const user = this;
   if (!user.isModified('password')) return next();
-  // password has been changed - salt and hash it
-  bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash) {
+  bcrypt.hash(user.password, SALT_ROUNDS, (err, hash) => {
     if (err) return next(err);
-    // replace the user provided password with the hash
     user.password = hash;
     next();
   });
 });
 
-userSchema.methods.comparePassword = function(tryPassword, cb) {
-  // 'this' represents the document that you called comparePassword on
-  bcrypt.compare(tryPassword, this.password, function(err, isMatch) {
+userSchema.methods.comparePassword = (tryPassword, cb) => {
+  bcrypt.compare(tryPassword, this.password, (err, isMatch) => {
     if (err) return cb(err);
     cb(null, isMatch);
   });
