@@ -10,7 +10,7 @@ export function index() {
     }
   };
   return fetch(BASE_URL, options).then(res => res.json());
-}
+};
 
 export function create(score) {
   const options = {
@@ -23,7 +23,7 @@ export function create(score) {
     body: JSON.stringify(score)
   };
   return fetch(BASE_URL, options).then(res => res.json());
-}
+};
 
 export function deleteOne(id) {
   const options = {
@@ -34,7 +34,7 @@ export function deleteOne(id) {
     },
   };
   return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
-}
+};
 
 export function update(paint, idx) {
   return fetch(`${BASE_URL}/${idx}`, {
@@ -42,4 +42,4 @@ export function update(paint, idx) {
     headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()},
     body: JSON.stringify(paint)
   }, {mode: "cors"}).then(res => res.json());
-}
+};

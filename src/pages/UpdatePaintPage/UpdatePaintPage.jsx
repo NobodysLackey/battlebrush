@@ -180,7 +180,7 @@ class UpdatePaintPage extends Component {
         </center>
       </>
     );
-  }
-}
+  };
+};
 
 export default UpdatePaintPage;

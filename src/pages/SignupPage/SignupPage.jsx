@@ -5,11 +5,11 @@ import './SignupPage.css';
 class SignupPage extends Component {
   state = {
     message: ''
-  }
+  };
 
   updateMessage = (msg) => {
     this.setState({message: msg});
-  }
+  };
 
   render() {
     return (
@@ -19,6 +19,6 @@ class SignupPage extends Component {
       </div>
     );
   }
-}
+};
 
 export default SignupPage;
