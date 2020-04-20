@@ -27,10 +27,12 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const paints = await paintAPI.index();
-    this.setState({
-      paints
-    })
+    if (this.state.user) {
+      const paints = await paintAPI.index();
+      this.setState({
+        paints
+      });
+    }
   }
 
   handleAddPaint = async (newPaintData) => {
