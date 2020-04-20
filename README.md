@@ -13,7 +13,7 @@
 
 ### ***Technologies Used***
 
-* ##### Chajr
+* ##### Chajr 1.2.2
 * ##### HTML
 * ##### CSS
 * ##### JavaScript
