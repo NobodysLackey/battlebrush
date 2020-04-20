@@ -23,7 +23,12 @@ class App extends Component {
   }
 
   handleSignupOrLogin = () => {
-    this.setState({user: userAPI.getUser()});
+    this.setState({user: userAPI.getUser()}, async () => {
+      const paints = await paintAPI.index();
+      this.setState({
+        paints
+      });
+    });
   }
 
   async componentDidMount() {
