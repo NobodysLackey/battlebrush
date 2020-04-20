@@ -12,15 +12,14 @@ export function index() {
   return fetch(BASE_URL, options).then(res => res.json());
 };
 
-export function create(score) {
+export function create(paint) {
   const options = {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
-      // Add this header - don't forget the space after Bearer
       'Authorization': 'Bearer ' + tokenService.getToken()
     },
-    body: JSON.stringify(score)
+    body: JSON.stringify(paint)
   };
   return fetch(BASE_URL, options).then(res => res.json());
 };

@@ -71,8 +71,8 @@ class LoginPage extends Component {
         </form>
         </center>
       </div>
-    );
-  };
+    )
+  }
 };
 
 export default LoginPage;

@@ -15,30 +15,30 @@ class App extends Component {
   state = {
     user: userAPI.getUser(),
     paints: []
-  };
+  }
 
   handleLogout = () => {
     userAPI.logout();
     this.setState({ user: null });
-  };
+  }
 
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
-  };
+  }
 
   async componentDidMount() {
     const paints = await paintAPI.index();
     this.setState({
       paints
     })
-  };
+  }
 
   handleAddPaint = async (newPaintData) => {
     const newPaint = await paintAPI.create(newPaintData);
     this.setState(state => ({
       paints: [...this.state.paints, newPaint]
     }), () => this.props.history.push('/paintlist'));
-  };
+  }
 
   handleDeletePaint = async (id) => {
     const deletedPaint = await paintAPI.deleteOne(id);
@@ -48,19 +48,19 @@ class App extends Component {
     const paints = await paintAPI.index();
     this.setState({
       paints
-    });
-  };
+    })
+  }
 
   handleUpdatePaint = async (updatedPaintData, idx, id) => {
     const updatedPaint = await paintAPI.update(updatedPaintData, idx);
     const newPaintsArray = this.state.paints.map(c =>
         c._id === id ? updatedPaint : c
-      );
+      )
       this.setState(
         {paints: newPaintsArray},
         () => this.props.history.push('/paintlist')
-      );
-  };
+      )
+  }
 
   render() {
     return (
@@ -125,8 +125,8 @@ class App extends Component {
           }/>
         </Switch>
       </div>
-    );
-  };
+    )
+  }
 };
 
 export default App;

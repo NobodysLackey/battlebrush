@@ -9,14 +9,14 @@ class SignupForm extends Component {
     email: '',
     password: '',
     passwordConf: ''
-  };
+  }
 
   handleChange = (e) => {
     this.props.updateMessage('');
     this.setState({
       [e.target.name]: e.target.value
     });
-  };
+  }
 
   handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,11 +27,11 @@ class SignupForm extends Component {
     } catch (err) {
       this.props.updateMessage(err.message);
     }
-  };
+  }
 
   isFormInvalid() {
     return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
-  };
+  }
 
   render() {
     return (
@@ -107,8 +107,8 @@ class SignupForm extends Component {
         </form>
         </center>
       </div>
-    );
-  };
+    )
+  }
 };
 
 export default SignupForm;
