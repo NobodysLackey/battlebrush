@@ -31,13 +31,13 @@ const NavBar = (props) => {
         <Link to='/login' className='NavBar-link'>SIGN IN</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
-      </div>;
+      </div>
     </div>
   return (
     <div className="nav-container">
       {nav}
     </div>
-  );
-};
+  )
+}
 
 export default NavBar;
