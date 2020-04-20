@@ -36,18 +36,18 @@ userSchema.set('toJSON', {
   }
 });
 
-userSchema.pre('save', (next) => {
+userSchema.pre('save', function(next) {
   const user = this;
   if (!user.isModified('password')) return next();
-  bcrypt.hash(user.password, SALT_ROUNDS, (err, hash) => {
+  bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash) {
     if (err) return next(err);
     user.password = hash;
     next();
   });
 });
 
-userSchema.methods.comparePassword = (tryPassword, cb) => {
-  bcrypt.compare(tryPassword, this.password, (err, isMatch) => {
+userSchema.methods.comparePassword = function(tryPassword, cb) {
+  bcrypt.compare(tryPassword, this.password, function(err, isMatch) {
     if (err) return cb(err);
     cb(null, isMatch);
   });

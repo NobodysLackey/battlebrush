@@ -36,6 +36,7 @@ async function login(req, res) {
 };
 
 function createJWT(user) {
+  user.set('paints', []);
   return jwt.sign(
     {user},
     SECRET,

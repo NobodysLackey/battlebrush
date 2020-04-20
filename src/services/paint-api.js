@@ -3,6 +3,7 @@ import tokenService from './tokenService';
 const BASE_URL = '/api/paints';
 
 export function index() {
+  console.log(tokenService.getToken());
   const options = {
     method: 'GET',
     headers: {

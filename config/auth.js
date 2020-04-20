@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
 module.exports = (req, res, next) => {
+  console.log(SECRET);
   let token = req.get('Authorization') || req.query.token || req.body.token;
   if (token) {
     token = token.replace('Bearer ', '');
