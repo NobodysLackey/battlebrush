@@ -3,6 +3,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  font-family: 'Baloo 2', cursive;
 }
 
 .logo {
@@ -11,6 +13,7 @@
 }
 
 .welcome {
+  font-family: 'Permanent Marker', cursive;
   color: rgb(38, 38, 38);
 }
 

@@ -12,10 +12,10 @@ class AddPaint extends Component {
         },
         displayColorPicker: false,
         color: {
-            r: '',
-            g: '',
-            b: '',
-            a: ''
+            r: '255',
+            g: '54',
+            b: '54',
+            a: '100'
         }
     };
 
@@ -69,7 +69,7 @@ class AddPaint extends Component {
                     borderRadius: '.5vmin',
                     boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
                     display: 'inline-block',
-                    cursor: 'pointer',
+                    cursor: 'zoom-in',
                 },
                 popover: {
                     position: 'absolute',
@@ -96,7 +96,7 @@ class AddPaint extends Component {
                     onSubmit={this.handleSubmit}
                 >
                     <span>Paint Name</span>
-                    <br></br><br></br>
+                    <br></br>
                     <input
                         className="input"
                         type="text"
@@ -105,9 +105,9 @@ class AddPaint extends Component {
                         onChange={this.handleChange}
                         autoComplete="off"
                     />
-                    <br></br><br></br><br></br>
-                    <span>Color</span>
                     <br></br><br></br>
+                    <span>Color</span>
+                    <br></br>
                     <div>
                         <div
                             style={ styles.swatch }
@@ -133,9 +133,9 @@ class AddPaint extends Component {
                             null
                         }
                     </div>
-                    <br></br><br></br><br></br>
+                    <br></br>
                     <span>Type</span>
-                    <br></br><br></br>
+                    <br></br>
                     <select
                         className="select"
                         type="text"
@@ -150,7 +150,7 @@ class AddPaint extends Component {
                         <option>Glaze</option>
                         <option>Technical</option>
                     </select>
-                    <br></br><br></br><br></br>
+                    <br></br><br></br>
                     <span>In Collection?</span>&nbsp;&nbsp;
                     <input
                         className="check"

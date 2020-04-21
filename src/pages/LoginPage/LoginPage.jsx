@@ -20,7 +20,7 @@ class LoginPage extends Component {
     try {
       await userAPI.login(this.state);
       this.props.handleSignupOrLogin();
-      this.props.history.push('/');
+      this.props.history.push('/paintlist');
     } catch (err) {
       alert('Invalid Credentials!');
     }

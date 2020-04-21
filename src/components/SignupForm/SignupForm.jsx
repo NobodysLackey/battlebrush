@@ -96,7 +96,7 @@ class SignupForm extends Component {
             >
               JOIN
             </button>
-            &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             <input
               type="submit"
               value="CANCEL"

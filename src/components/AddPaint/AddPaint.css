@@ -1,4 +1,5 @@
 .form {
+    font-family: 'Baloo 2', cursive;
     text-align: center;
 }
 
@@ -9,10 +10,12 @@
     border-radius: .5vmin;
     text-align: center;
 
+    font-family: 'Baloo 2', cursive;
     font-size: 2vmin;
 
     padding: 1vmin;
-  
+    outline: none;
+
     height: 3vmin;
     width: 25vmin;
 }
@@ -22,6 +25,10 @@
     border-color: rgb(62, 62, 62);
     border-width: .25vmin;
     border-radius: .5vmin;
+
+    outline: none;
+
+    font-family: 'Baloo 2', cursive;
     text-align: center;
 
     height: 5vmin;
@@ -29,6 +36,7 @@
 }
 
 .title {
+    font-family: 'Permanent Marker', cursive;
     color: rgb(62, 62, 62);
 }
 
@@ -41,6 +49,9 @@
     border-radius: .5vmin;
     text-align: center;
 
+    outline: none;
+
+    font-family: 'Baloo 2', cursive;
     color: rgb(62, 62, 62);
     font-size: 2vmin;
     font-weight: bold;
@@ -57,6 +68,8 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe0501",endColorstr="#ff0082",GradientType=1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    outline: none;
 
     cursor: pointer;
 }

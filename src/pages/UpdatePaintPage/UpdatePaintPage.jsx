@@ -86,12 +86,12 @@ class UpdatePaintPage extends Component {
     return (
       <>
         <div className="title">
-          <h2>Update "{this.state.formData.colorName}"</h2>
+          <h2>Update {this.state.formData.colorName}</h2>
         </div>
         <center>
-          <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+          <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit} className="form">
           <span>Paint Name</span>
-                <br></br><br></br>
+                <br></br>
                 <input
                     className="input"
                     type="text"
@@ -102,7 +102,7 @@ class UpdatePaintPage extends Component {
                 />
                 <br></br><br></br>
             <span>Color</span>
-            <br></br><br></br>
+            <br></br>
               <div>
                 <div
                     style={ styles.swatch }
@@ -128,9 +128,9 @@ class UpdatePaintPage extends Component {
                     null
                 }
               </div>
-            <br></br><br></br>
+            <br></br>
             <label>Type</label>
-            <br></br><br></br>
+            <br></br>
             <select
                 className="select"
                 type="text"

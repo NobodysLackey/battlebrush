@@ -25,7 +25,9 @@ const NavBar = (props) => {
     :
     <div className='NavBar'>
       <div>
-        <img className="navlogo" src="./logo192.png" alt="logo"></img>
+        <a href="/">
+          <img className="navlogo" src="../logo192.png" alt="logo"></img>
+        </a>
       </div>
       <div className="links">
         <Link to='/login' className='NavBar-link'>SIGN IN</Link>
