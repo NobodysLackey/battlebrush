@@ -9,7 +9,7 @@ body {
   background-color: white;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 code {
