@@ -142,7 +142,7 @@ img {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (max-width: 414px) {
     .Paint-card {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -209,7 +209,7 @@ img {
 
         color: rgb(38, 38, 38);
         font-style: italic;
-        font-size: 3.5vmin;
+        font-size: 4vmin;
         line-height: 13vmin;
     }
 
@@ -220,7 +220,7 @@ img {
         grid-row-end: 4;
 
         color: rgb(38, 38, 38);
-        font-size: 3vmin;
+        font-size: 3.5vmin;
         line-height: 13vmin;
         text-align: left;
 
@@ -235,7 +235,7 @@ img {
 
         vertical-align: middle;
 
-        font-size: 3vmin;
+        font-size: 3.5vmin;
         line-height: 13vmin;
         font-weight: bold;
         color: rgb(38, 38, 38);
@@ -249,7 +249,7 @@ img {
         grid-row-start: 2;
         grid-row-end: 3;
 
-        font-size: 3vmin;
+        font-size: 3.5vmin;
         line-height: 13vmin;
         font-weight: bold;
         color: rgb(38, 38, 38);
