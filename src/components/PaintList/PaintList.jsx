@@ -6,12 +6,13 @@ const PaintList = (props) => {
   if(props.paints.length){
     return (
       <>
+        <center>
         <div className="title">
           <h2>Paint List</h2>
         </div>
         <div className="PaintList">
           {props.paints.map((paint, idx) =>
-            <div>
+            <div className="PaintCard">
               <Paint
                 idx = {idx}
                 key= {paint._id}
@@ -22,6 +23,7 @@ const PaintList = (props) => {
             </div>
           )}
         </div>
+        </center>
       </>
     )
   } else {

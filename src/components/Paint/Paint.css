@@ -141,3 +141,119 @@ img {
 
     cursor: pointer;
 }
+
+@media only screen and (min-width: 414px) {
+    .Paint-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    
+        height: 40vmin;
+        width: 80vmin;
+    
+        background-color: rgb(206, 206, 206);
+    
+        text-align: center;
+        text-decoration: none;
+    
+        border: solid;
+        border-color: rgb(38, 38, 38);
+        border-width: .3vmin;
+    
+        box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
+    }
+
+    img {
+        height: 10vmin;
+        width: 10vmin;
+    }
+
+    .Paint-card-drop-div {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        background-color: rgb(126, 126, 126);
+
+        padding-top: 1.8vmin;
+        padding-left: 10vmin;
+    }
+
+    .Paint-card-drop {
+        width: 10vmin;
+        height: 10vmin;
+    }
+
+    .Paint-card-title {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        background-color: rgb(126, 126, 126);
+
+        color: white;
+        font-weight: bold;
+        font-size: 5vmin;
+        line-height: 13vmin;
+
+        padding: .2vmin;
+    }
+
+    .Paint-card-type {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        color: rgb(38, 38, 38);
+        font-style: italic;
+        font-size: 3.5vmin;
+        line-height: 13vmin;
+    }
+
+    .Paint-card-owned {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        color: rgb(38, 38, 38);
+        font-size: 3vmin;
+        line-height: 13vmin;
+        text-align: left;
+
+        padding-left: 7vmin;
+    }
+
+    .delete-btn {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        vertical-align: middle;
+
+        font-size: 3vmin;
+        line-height: 13vmin;
+        font-weight: bold;
+        color: rgb(38, 38, 38);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .update-btn {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        font-size: 3vmin;
+        line-height: 13vmin;
+        font-weight: bold;
+        color: rgb(38, 38, 38);
+        text-decoration: none;
+        text-align: center;
+    }
+}

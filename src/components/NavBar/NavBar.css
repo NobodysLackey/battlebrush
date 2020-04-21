@@ -62,3 +62,57 @@
 
   height: 7vmin;
 }
+
+@media only screen and (min-width: 414px) {
+  .NavBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  
+    font-family: 'Baloo 2', cursive;
+  
+    height: 15vmin;
+    background-color:  rgb(234, 234, 234);
+    font-size: 5vmin;
+    box-shadow: 0vmin 0.25vmin 3vmin 0.25vmin rgb(55, 55, 55);
+  }
+  
+  .nav-container {
+    width: 100%;
+  }
+  
+  .NavBar-link {
+    text-decoration: none;
+    line-height: 15vmin;
+    color: rgb(62, 62, 62);
+    font-weight: bold;
+  }
+  
+  .navlogo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+    justify-self: start;
+  
+    height: 15vmin;
+    width: 15vmin;
+  }
+  
+  .links {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+    text-align: center;
+    line-height: 15vmin;
+  
+    padding-right: 2vmin;
+  
+    justify-self: end;
+  
+    height: 15vmin;
+  }
+}
