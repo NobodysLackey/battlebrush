@@ -1,4 +1,4 @@
-# **Battle Brush**
+![Battle Brush](public/banner.png)
 
 ### Date: 4/20/2020
 
@@ -33,10 +33,13 @@
 ### ***Screenshots***
 
 ###### Welcome Page
-![Welcome Page](public/screenshot1.png)
+![Welcome Page](public/welcome.png)
 
 ###### Paint List
-![Paint List](public/screenshot2.png)
+![Paint List](public/list.png)
+
+###### Mobile Responsive
+![Mobile Responsive](public/mobile.png)
 ***
 
 ### ***Future Updates***
