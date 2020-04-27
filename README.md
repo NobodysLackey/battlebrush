@@ -12,15 +12,10 @@
 ***
 
 ### ***Technologies Used***
+![Technologies Used](public/tech-banner.png)
 
-* ##### Chajr 1.2.2
-* ##### HTML
-* ##### CSS
-* ##### JavaScript
-* ##### MongoDB/Mongoose
-* ##### Node/Express
-* ##### React
-* ##### Heroku
+##### ***Additional Technologies***
+* Chajr 1.2.2
 ***
 
 ### ***Getting Started***
