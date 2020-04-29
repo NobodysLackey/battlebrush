@@ -12,6 +12,7 @@
 ***
 
 ### ***Technologies Used***
+
 ![Technologies Used](public/tech-banner.png)
 
 ##### ***Additional Technologies***
@@ -40,17 +41,15 @@
 ### ***Future Updates***
 
 - [x] ~~Make app scale for mobile~~
-- [ ] Add sorting/searching
 - [ ] Add ability to create 'swatches' for paint progressions
-- [ ] Let users search through all added paints and add others' created paints to their collection
 - [ ] Add 'brand' to the Paint model
-- [ ] Consume data from a third-party API
-- [ ] Implement additional functionality if the user is an admin
+- [ ] Add sorting/searching
+- [ ] Let users search through all added paints and add others' created paints to their collection
 ***
 
 ### ***Credits***
 
-##### App Scaffolding: [Chajr](https://github.com/davidstinson/chajr)
+##### App Scaffolding: [Chajr 1.2.2](https://github.com/davidstinson/chajr)
 
 ##### Color Picker: [React Color](https://casesandberg.github.io/react-color/)
 ***

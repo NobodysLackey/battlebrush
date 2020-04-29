@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Paint.css';
 
-
 const Paint = ({paint, handleDeletePaint, idx}) => {
   return (
     <React.Fragment>
