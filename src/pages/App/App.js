@@ -115,6 +115,7 @@ class App extends Component {
             userAPI.getUser() ? 
               <ProfilePage 
                 user = {this.state.user}
+                paints = {this.state.paints}
               />
             :
               <Redirect to='/login'/>

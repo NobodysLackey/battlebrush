@@ -13,7 +13,7 @@
 
     border: solid;
     border-color: rgb(38, 38, 38);
-    border-width: .3vmin;
+    border-width: .4vmin;
 
     box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
 }
@@ -36,7 +36,7 @@ img {
 
     background-color: rgb(126, 126, 126);
 
-    padding-top: .5vmin;
+    padding-top: .7vmin;
     padding-left: 4vmin;
 }
 
