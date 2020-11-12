@@ -41,10 +41,14 @@
 ### ***Future Updates***
 
 - [x] ~~Make app scale for mobile~~
+- [x] ~~Add Contrast and Primer to the Paint Schema~~
 - [ ] Add ability to create 'swatches' for paint progressions
 - [ ] Add 'brand' to the Paint model
 - [ ] Add sorting/searching
 - [ ] Let users search through all added paints and add others' created paints to their collection
+- [ ] More content on the profile page
+- [ ] No more 'white' background
+- [ ] New app logo
 ***
 
 ### ***Credits***
