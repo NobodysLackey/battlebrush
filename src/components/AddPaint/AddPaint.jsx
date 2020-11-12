@@ -149,6 +149,8 @@ class AddPaint extends Component {
                         <option>Edge</option>
                         <option>Glaze</option>
                         <option>Technical</option>
+                        <option>Contrast</option>
+                        <option>Primer</option>
                     </select>
                     <br></br><br></br>
                     <span>In Collection?</span>&nbsp;&nbsp;
