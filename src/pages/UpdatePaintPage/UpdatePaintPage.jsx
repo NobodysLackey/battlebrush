@@ -145,6 +145,8 @@ class UpdatePaintPage extends Component {
                 <option>Edge</option>
                 <option>Glaze</option>
                 <option>Technical</option>
+                <option>Contrast</option>
+                <option>Primer</option>
             </select>
             <br></br><br></br>
             <label>In Collection?</label>

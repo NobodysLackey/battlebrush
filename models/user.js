@@ -11,7 +11,7 @@ const paintSchema = new mongoose.Schema({
   },
   paintType: {
     type: String,
-    enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze'],
+    enum: ['Base', 'Layer', 'Shade', 'Technical', 'Edge', 'Glaze', 'Contrast', 'Primer'],
     default: 'Layer'
   },
   color: {}
