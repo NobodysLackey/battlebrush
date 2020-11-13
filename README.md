@@ -1,14 +1,14 @@
 ![Battle Brush](public/banner.png)
 
-### Date: 4/20/2020
+## Date: 4/20/2020
 
-#### By: Michael Lackey
-#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/) | [GA Profile](https://profiles.generalassemb.ly/michaellackey)
+### By: Michael Lackey
+#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/) | [Vettery](https://www.vettery.com/ga/employers)
 ***
 
 ### ***Description***
 
-##### A full-stack MERN application for tracking miniature wargaming hobby paints.
+##### Battle Brush is a full-stack MERN application that makes it easy to track miniature wargaming hobby paints.
 ***
 
 ### ***Technologies Used***
