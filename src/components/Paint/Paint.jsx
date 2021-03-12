@@ -17,7 +17,7 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
         </div>
         <div className="Paint-card-title" >{paint.colorName}</div>
         <div className="Paint-card-type">{paint.paintType}</div>
-        <div className="Paint-card-owned">{paint.isOwned ? '✅ In Collection' : '🚫 Not In Collection'}</div>
+        <div className="Paint-card-owned">{paint.isOwned ? '✅  In Collection' : '🚫  Not In Collection'}</div>
         <Link
           className='update-btn'
           to={{
