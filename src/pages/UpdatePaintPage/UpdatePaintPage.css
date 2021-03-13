@@ -1,12 +1,13 @@
 .form {
     text-align: center;
     font-family: 'Baloo 2', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .input {
-    border: solid;
-    border-color: rgb(62, 62, 62);
-    border-width: .25vmin;
     border-radius: .5vmin;
     text-align: center;
 
@@ -20,9 +21,6 @@
 }
 
 .select {
-    border: solid;
-    border-color: rgb(62, 62, 62);
-    border-width: .25vmin;
     border-radius: .5vmin;
 
     font-family: 'Baloo 2', cursive;
@@ -40,9 +38,6 @@
 .btn {
     background-color:  rgb(234, 234, 234);
     
-    border: solid;
-    border-color: rgb(62, 62, 62);
-    border-width: .25vmin;
     border-radius: .5vmin;
 
     font-family: 'Baloo 2', cursive;
@@ -54,6 +49,10 @@
 
     height: 4vmin;
     width: 10vmin;
+
+    background: rgb(234, 234, 234);
+    box-shadow:  8px 8px 22px #d5d5d5,
+                -8px -8px 22px #ffffff;
 }
 
 .btn:hover {
@@ -68,4 +67,19 @@
     font-family: 'Baloo 2', cursive;
 
     cursor: pointer;
+}
+
+.swatch {
+    border: 'none';
+    width: 9vmin;
+    height: 4.5vmin;
+    border-radius: .5vmin;
+
+    background: rgb(234, 234, 234);
+    box-shadow:  8px 8px 22px #d5d5d5,
+                -8px -8px 22px #ffffff;
+}
+
+span {
+    padding: 0 0 0.75vmin 0;
 }

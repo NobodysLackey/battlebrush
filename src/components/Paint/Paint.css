@@ -11,16 +11,15 @@
     text-align: center;
     text-decoration: none;
 
-    border: solid;
-    border-color: rgb(38, 38, 38);
-    border-width: .4vmin;
-
-    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
+    border-radius: 12px;
+    background: #ededed;
+    box-shadow: 8px 8px 22px #cccccc,
+               -8px -8px 22px #ffffff;
 }
 
 .Paint-card:hover {
-    background-color: rgb(230, 230, 230);
-    box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(187, 187, 187);
+    box-shadow: -8px -8px 22px #cccccc,
+                 8px 8px 22px #ffffff;
 }
 
 img {
@@ -34,7 +33,9 @@ img {
     grid-row-start: 1;
     grid-row-end: 2;
 
-    background-color: rgb(126, 126, 126);
+    border-radius: 0 12px 0 0;
+
+    background-color: rgb(223, 223, 223);
 
     padding-top: .7vmin;
     padding-left: 4vmin;
@@ -54,6 +55,7 @@ img {
     
     width: 4vmin;
     height: 4vmin;
+    cursor: zoom-in;
 }
 
 .Paint-card-title {
@@ -62,9 +64,11 @@ img {
     grid-row-start: 1;
     grid-row-end: 2;
 
-    background-color: rgb(126, 126, 126);
+    border-radius: 12px 0 0 0;
 
-    color: white;
+    background-color: rgb(223, 223, 223);
+
+    color: rgb(87, 87, 87);
     font-weight: bold;
     font-size: 2.2vmin;
     line-height: 5vmin;
@@ -91,7 +95,7 @@ img {
     grid-row-end: 4;
 
     color: rgb(38, 38, 38);
-    font-size: 1.75vmin;
+    font-size: 1.5vmin;
     line-height: 5vmin;
     text-align: left;
 
@@ -155,10 +159,6 @@ img {
     
         text-align: center;
         text-decoration: none;
-    
-        border: solid;
-        border-color: rgb(38, 38, 38);
-        border-width: .3vmin;
     
         box-shadow: 0vmin 0vmin 2vmin 0vmin rgb(55, 55, 55);
     }

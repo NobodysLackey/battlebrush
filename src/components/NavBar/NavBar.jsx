@@ -6,17 +6,15 @@ const NavBar = (props) => {
   let nav = props.user ?
     <div className='NavBar'>
       <div>
+        &nbsp;&nbsp;
         <a href="/">
           <img className="navlogo" src="../logo192.png" alt="logo"></img>
         </a>
       </div>
       <div className="links">
-        <Link to='/paintlist' className='NavBar-link'>PAINTS</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/addpaint' className='NavBar-link'>ADD</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/profile' className='NavBar-link'>PROFILE</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to='/paintlist' className='NavBar-link'>PAINTS</Link>|
+        <Link to='/addpaint' className='NavBar-link'>ADD</Link>|
+        <Link to='/profile' className='NavBar-link'>PROFILE</Link>|
         <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOGOUT</Link>
       </div>
     </div>

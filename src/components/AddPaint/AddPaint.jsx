@@ -58,14 +58,14 @@ class AddPaint extends Component {
                 color: {
                     width: '8vmin',
                     height: '3.5vmin',
+                    border: 'none',
                     borderRadius: '.5vmin',          
                     background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
                 },
                 swatch: {
                     padding: '5px',
                     background: '#fff',
-                    border: 'solid',
-                    borderWidth: '.25vmin',
+                    border: 'none',
                     borderRadius: '.5vmin',
                     boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
                     display: 'inline-block',
@@ -96,7 +96,6 @@ class AddPaint extends Component {
                     onSubmit={this.handleSubmit}
                 >
                     <span>Paint Name</span>
-                    <br></br>
                     <input
                         className="input"
                         type="text"
@@ -105,10 +104,9 @@ class AddPaint extends Component {
                         onChange={this.handleChange}
                         autoComplete="off"
                     />
-                    <br></br><br></br>
-                    <span>Color</span>
                     <br></br>
-                    <div>
+                    <span>Color</span>
+                    <div className="swatch">
                         <div
                             style={ styles.swatch }
                             onClick={ this.handleClick }
@@ -135,7 +133,6 @@ class AddPaint extends Component {
                     </div>
                     <br></br>
                     <span>Type</span>
-                    <br></br>
                     <select
                         className="select"
                         type="text"
@@ -152,8 +149,8 @@ class AddPaint extends Component {
                         <option>Contrast</option>
                         <option>Primer</option>
                     </select>
-                    <br></br><br></br>
-                    <span>In Collection?</span>&nbsp;&nbsp;
+                    <br></br>
+                    <span>In Collection?&nbsp;&nbsp;
                     <input
                         className="check"
                         type="checkbox"
@@ -161,7 +158,8 @@ class AddPaint extends Component {
                         value={this.state.formData.isOwned}
                         onChange={this.handleChange}
                     />
-                    <br></br><br></br>
+                    </span>
+                    <br></br>
                     <input
                         className="btn"
                         type="submit"

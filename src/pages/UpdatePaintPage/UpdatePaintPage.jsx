@@ -62,12 +62,10 @@ class UpdatePaintPage extends Component {
         swatch: {
           padding: '5px',
           background: '#fff',
-          border: 'solid',
-          borderWidth: '.25vmin',
           borderRadius: '.5vmin',
           boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
           display: 'inline-block',
-          cursor: 'pointer',
+          cursor: 'zoom-in',
         },
         popover: {
           position: 'absolute',
@@ -91,7 +89,6 @@ class UpdatePaintPage extends Component {
         <center>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit} className="form">
           <span>Paint Name</span>
-                <br></br>
                 <input
                     className="input"
                     type="text"
@@ -100,10 +97,9 @@ class UpdatePaintPage extends Component {
                     onChange={this.handleChange}
                     autoComplete="off"
                 />
-                <br></br><br></br>
+                <br></br>
             <span>Color</span>
-            <br></br>
-              <div>
+              <div className="swatch">
                 <div
                     style={ styles.swatch }
                     onClick={ this.handleClick }
@@ -129,8 +125,7 @@ class UpdatePaintPage extends Component {
                 }
               </div>
             <br></br>
-            <label>Type</label>
-            <br></br>
+            <span>Type</span>
             <select
                 className="select"
                 type="text"
@@ -148,18 +143,18 @@ class UpdatePaintPage extends Component {
                 <option>Contrast</option>
                 <option>Primer</option>
             </select>
-            <br></br><br></br>
-            <label>In Collection?</label>
-            &nbsp;&nbsp;
-            <input
-              type="checkbox"
-              className="switch"
-              name="isOwned"
-              checked={this.state.formData.isOwned}
-              value={this.state.formData.isOwned}
-              onChange={this.handleChange}
-            />
-            <br></br><br></br>
+            <br></br>
+            <span>In Collection?&nbsp;&nbsp;
+              <input
+                type="checkbox"
+                className="switch"
+                name="isOwned"
+                checked={this.state.formData.isOwned}
+                value={this.state.formData.isOwned}
+                onChange={this.handleChange}
+              />
+            </span>
+            <br></br>
             <button
               type="submit"
               className="btn"

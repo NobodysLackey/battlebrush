@@ -12,18 +12,26 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
             className="Paint-card-drop"
             style={{"backgroundColor":`rgba(${paint.color.r}, ${paint.color.g}, ${paint.color.b}, ${paint.color.a})`}}
           >
-            <img src="./drop-grey.png" alt="paintdrop"/>
+            <Link
+              to={{
+                pathname: '/update',
+                state: {paint},
+                idx: idx
+              }}
+            >
+              <img className="Paint-card-drop" src="./drop-grey.png" alt="paintdrop"/>
+            </Link>
           </div>
         </div>
         <div className="Paint-card-title" >{paint.colorName}</div>
         <div className="Paint-card-type">{paint.paintType}</div>
-        <div className="Paint-card-owned">{paint.isOwned ? '✅  In Collection' : '🚫  Not In Collection'}</div>
+        <div className="Paint-card-owned">{paint.isOwned ? 'In Collection' : 'Not In Collection'}</div>
         <Link
           className='update-btn'
           to={{
-                  pathname: '/update',
-                  state: {paint},
-                  idx: idx
+            pathname: '/update',
+            state: {paint},
+            idx: idx
           }}
         >
         UPDATE

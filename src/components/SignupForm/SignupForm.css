@@ -1,7 +1,4 @@
 .input {
-  border: solid;
-  border-color: black;
-  border-width: .25vmin;
 
   padding: 1vmin;
 
@@ -16,9 +13,6 @@
 .btn {
   background-color:  rgb(234, 234, 234);
   
-  border: solid;
-  border-color: rgb(62, 62, 62);
-  border-width: .25vmin;
   border-radius: .5vmin;
   text-align: center;
 
