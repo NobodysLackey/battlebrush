@@ -77,7 +77,8 @@
     height: 15vmin;
     background-color:  rgb(234, 234, 234);
     font-size: 5vmin;
-    box-shadow: 0vmin 0.25vmin 3vmin 0.25vmin rgb(55, 55, 55);
+    box-shadow:  8px 8px 22px #cccccc,
+                -8px -8px 22px #ffffff;
   }
   
   .nav-container {
@@ -86,9 +87,10 @@
   
   .NavBar-link {
     text-decoration: none;
-    line-height: 15vmin;
     color: rgb(62, 62, 62);
     font-weight: bold;
+    border-radius: 7px;
+    padding: 1vmin;
   }
   
   .navlogo {
