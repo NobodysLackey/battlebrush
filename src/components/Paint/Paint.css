@@ -24,7 +24,6 @@
 
 img {
     height: 4vmin;
-    width: 4vmin;
 }
 
 .Paint-card-drop-div {
@@ -42,7 +41,6 @@ img {
 }
 
 .Paint-card-drop {
-    width: 4vmin;
     height: 4vmin;
 }
 
@@ -53,7 +51,6 @@ img {
     background: linear-gradient(180deg, rgba(254,5,1,1) 0%, rgba(254,52,1,1) 0%, rgba(255,0,0,1) 10%, rgba(255,111,0,1) 20%, rgba(255,156,0,1) 30%, rgba(255,206,0,1) 40%, rgba(200,255,0,1) 50%, rgba(0,255,160,1) 60%, rgba(102,170,238,1) 70%, rgba(180,67,255,1) 80%, rgba(255,0,130,1) 90%, rgba(255,0,130,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe0501",endColorstr="#ff0082",GradientType=1);
     
-    width: 4vmin;
     height: 4vmin;
     cursor: zoom-in;
 }
@@ -115,7 +112,8 @@ img {
     font-weight: bold;
     color: rgb(38, 38, 38);
     text-decoration: none;
-    text-align: center;
+    text-align: right;
+    padding-right: 1vmin;
 }
 
 .delete-btn:hover {
@@ -136,7 +134,8 @@ img {
     font-weight: bold;
     color: rgb(38, 38, 38);
     text-decoration: none;
-    text-align: center;
+    text-align: right;
+    padding-right: 1vmin;
 }
 
 .update-btn:hover {
@@ -168,7 +167,6 @@ img {
 
     img {
         height: 10vmin;
-        width: 10vmin;
     }
 
     .Paint-card-drop-div {
@@ -186,7 +184,6 @@ img {
     }
 
     .Paint-card-drop {
-        width: 10vmin;
         height: 10vmin;
     }
 
@@ -247,7 +244,9 @@ img {
         font-weight: bold;
         color: rgb(38, 38, 38);
         text-decoration: none;
-        text-align: center;
+        
+        text-align: right;
+        padding-right: 2vmin;
     }
 
     .update-btn {
@@ -261,6 +260,8 @@ img {
         font-weight: bold;
         color: rgb(38, 38, 38);
         text-decoration: none;
-        text-align: center;
+        
+        text-align: right;
+        padding-right: 2vmin;
     }
 }

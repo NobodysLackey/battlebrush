@@ -19,7 +19,7 @@ const Paint = ({paint, handleDeletePaint, idx}) => {
                 idx: idx
               }}
             >
-              <img className="Paint-card-drop" src="./drop-grey.png" alt="paintdrop"/>
+              <img className="Paint-card-drop" src="./paint-mask.png" alt="paintmask"/>
             </Link>
           </div>
         </div>
