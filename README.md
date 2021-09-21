@@ -30,9 +30,7 @@
 
 <div align="center">
   <pre>
-    <img src="public/welcome.png" />&nbsp;
-    <img src="public/list.png" />&nbsp;
-    <img src="public/mobile.png" />
+    <img src="public/welcome.png" height="500" />&nbsp;<img src="public/list.png" height="500" />&nbsp;<img src="public/mobile.png" height="500" />
   </pre>
 </div>
 
