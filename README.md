@@ -28,14 +28,14 @@
 
 ### ***Screenshots***
 
-###### Welcome Page
-![Welcome Page](public/welcome.png)
+<div align="center">
+  <pre>
+    <img src="public/welcome.png">
+    <img src="public/list.png">
+    <img src="public/mobile.png">
+  </pre>
+</div>
 
-###### Paint List
-![Paint List](public/list.png)
-
-###### Mobile Responsive
-![Mobile Responsive](public/mobile.png)
 ***
 
 ### ***Future Updates***
